@@ -25,7 +25,7 @@ function Speak(props) {
         props.speakOver();
         setSpeaking(false);
     }
-  }, speaking ? 400 : null);
+  }, speaking ? 200 : null);
 
   let speak = (event) => {
     event.preventDefault();
