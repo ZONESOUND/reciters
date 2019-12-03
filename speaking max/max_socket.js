@@ -67,6 +67,12 @@ function addSocketListener() {
 			sender({name:'speak', value:message});
 		});
 
+		Max.addHandler('debug', (message) => {
+			Max.post(message);
+			//socket.emit('', message);
+			sender({name:'debug', value:message});
+		});
+
 	})
 }
 

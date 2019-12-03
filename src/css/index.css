@@ -5,9 +5,48 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: black;
+  color: white;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+button {
+
+  margin: auto;
+	z-index: 10;
+	border: 0.8px solid white;
+	background: black;
+	width: 5em;
+	height: 4em;
+	color: white;
+	font-size: 1.5em;
+	font-weight: 100;
+}
+
+button:hover {
+	background: white;
+	color: gray;
+	transition: all 0.3s
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }

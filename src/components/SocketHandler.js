@@ -1,19 +1,29 @@
 import React, {useState, useEffect} from 'react';
 import {connectSocket, onSocket, emitData } from '../usages/socketUsage';
 import Speak from './Speak';
+import {useInterval} from '../usages/tool';
 
-function SocketHandler() {
+function SocketHandler(props) {
     const [speak, setSpeak] = useState(false);
-    const [sentence, setSentence] = useState();
+    const [sentence, setSentence] = useState('');
     const [id, setId] = useState(-1);
+    const [changeVoice, setChangeVoice] = useState(false);
+    const [launch, setLaunch] = useState(false);
+    useEffect(()=>{
+        if (props.start) {
+            setLaunch(true);
+        }
+    }, [props.start])
+
     useState(()=> {
         connectSocket('/receiver');
         onSocket('debug', (data)=> {
             console.log(data);
         }); 
         onSocket('speak', (data)=> {
-            //console.log('speak!', data);
+            
             if (!speak) {
+                console.log('speak!', data);
                 setSentence(data.text);
                 setId(data.id);
                 setSpeak(true);
@@ -21,9 +31,24 @@ function SocketHandler() {
             //TODO: if speak -> do something?   
         })
     });
+
+    useInterval(() => {
+        setChangeVoice(!changeVoice);
+    }, launch ? 100 : null);
+    setTimeout(()=>{
+        setLaunch(false);
+    }, 2000);
+
     let sendDebug = () => {
         emitData('debug', 'testing');
     }
+    let sendChangeVoice = () => {
+        console.log('send change voice');
+        setChangeVoice(!changeVoice);
+    }
+    useEffect(()=>{
+        console.log('change~', changeVoice);
+    }, [changeVoice])
     let speakOver = () => {
         setSpeak(false);
         console.log('speak over', id);
@@ -31,8 +56,9 @@ function SocketHandler() {
         emitData('speakover', {id: id});
     }
     return (<>
-        <button onClick={sendDebug}></button>
-        <Speak speak={speak} sentence={sentence} speakOver={speakOver}/>
+        {/* <button onClick={sendChangeVoice}></button> */}
+        <Speak toSpeak={speak} sentence={sentence} speakOver={speakOver} 
+                changeVoice={changeVoice} form={false}/>
     </>);
 }
 
