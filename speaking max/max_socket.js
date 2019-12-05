@@ -50,6 +50,11 @@ function addSocketListener() {
 			Max.post(message)
 		});
 
+		socket.on('speakOver', (message) => {
+			//Max.bang();
+			Max.outlet(true);
+		});
+
 		socket.on('osc', (message) => {
 			Max.post(message)
 			Max.outlet(message)
@@ -67,10 +72,16 @@ function addSocketListener() {
 			sender({name:'speak', value:message});
 		});
 
-		Max.addHandler('debug', (message) => {
+		Max.addHandler('speakAdvance', (dict) => {
+			Max.post(dict);
+			//socket.emit('', message);
+			sender({name:'speakAdvance', value:dict});
+		});
+
+		Max.addHandler('speakConfig', (message) => {
 			Max.post(message);
 			//socket.emit('', message);
-			sender({name:'debug', value:message});
+			sender({name:'speakConfig', value:message});
 		});
 
 	})

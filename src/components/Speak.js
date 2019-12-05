@@ -1,6 +1,17 @@
 import React, {useState, useEffect} from 'react';
 import { useInterval, usePrevious } from '../usages/tool';
 import InfoPage from './InfoPage';
+import Fade from './Fade';
+import styled from 'styled-components'
+
+const FullDiv = styled.div`
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -10;
+  background: ${props => 
+    props.bgColor === undefined ? "white" : props.bgColor};  
+`
 
 function Speak(props) {
   const synth = window.speechSynthesis;  
@@ -24,7 +35,6 @@ function Speak(props) {
   }, [toSpeak, sentence]);
 
   useEffect(()=>{
-    console.log(prevChangeVoice, changeVoice);
     if (prevChangeVoice !== changeVoice) {
       changeVoiceIdx(Math.floor(Math.random()*voices.length));
     }
@@ -66,33 +76,56 @@ function Speak(props) {
 
   }
 
-  // if (!speaking && props.speak && props.sentence !== undefined) {
-  //   setSpeaking(true);
-  //   setSentence(props.sentence);
-  //   console.log('<speak> speak!', props.sentence);
-  //   speakTxt(props.sentence);
-  //   //props.speakOver();
-  // }
+
+  
+
+  const formProps = {
+    onSubmitF: submitSpeak,
+    voiceIndex: voiceIndex, 
+    voiceOnChanged: changeVoiceIdx, 
+    voices: voices, 
+    pitch: pitch, 
+    rate: rate, 
+    pitchOnChanged: setPitch, 
+    rateOnChanged: setRate
+  }
+
+  let personName = voices[voiceIndex] !== undefined ? 
+        `${voices[voiceIndex].name} (${voices[voiceIndex].lang})` : '';
 
   return (
-    <>{props.form &&
-    <form onSubmit={submitSpeak}>
-      <select value={voiceIndex} onChange={(e) => {changeVoiceIdx(e.target.value)}}>
+    <>
+      {props.form && <SpeakForm {...formProps}/>}
+      <InfoPage personName={personName} 
+        sentence={revealSentence} nameColor={speaking ? 'black': 'white'}/>
+      <Fade show={speaking} speed={'0.3s'}>
+        <FullDiv/>
+      </Fade>
+    </>
+  );
+}
+
+function SpeakForm(props) {
+  const {onSubmitF, voiceIndex, 
+        voiceOnChanged, voices, pitch, rate, 
+        pitchOnChanged, rateOnChanged} = props;
+  console.log('speak form', voiceIndex);
+  return (
+    <form onSubmit={onSubmitF}>
+      <select value={voiceIndex} onChange={(e) => {voiceOnChanged(e.target.value)}}>
         {voices.map((value, index) => {
           return <option key={index} value={index}>{`${value.name} (${value.lang})`}</option>
         })}
       </select>
       <br/>
       <label htmlFor='pitch'>pitch</label>
-      <input type='number' step={0.01} value={pitch} onChange={(e)=>{setPitch(e.target.value)}} id='pitch' />
+      <input type='number' step={0.01} value={pitch} onChange={(e)=>{pitchOnChanged(e.target.value)}} id='pitch' />
       <br/>
       <label htmlFor='rate'>rate</label>
-      <input type='number' step={0.01} value={rate}  onChange={(e)=>{setRate(e.target.value)}} id='rate'/>
+      <input type='number' step={0.01} value={rate}  onChange={(e)=>{rateOnChanged(e.target.value)}} id='rate'/>
       <input type='submit'></input>
-    </form>}
-    <InfoPage personName={voices[voiceIndex] !== undefined ? voices[voiceIndex].name : ''} sentence={revealSentence}/>
-    </>
-  );
+    </form>
+  )
 }
 
 export default Speak;

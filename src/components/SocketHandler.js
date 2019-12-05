@@ -11,7 +11,8 @@ function SocketHandler(props) {
     const [launch, setLaunch] = useState(false);
     useEffect(()=>{
         if (props.start) {
-            setLaunch(true);
+            //setLaunch(true);
+            changeVoiceEffect();
         }
     }, [props.start])
 
@@ -29,15 +30,25 @@ function SocketHandler(props) {
                 setSpeak(true);
             }
             //TODO: if speak -> do something?   
-        })
+        });
+        onSocket('speakConfig', (data)=> {
+            console.log(data);
+            if (data.mode === 'changeVoice') 
+                changeVoiceEffect();
+        }); 
     });
 
     useInterval(() => {
         setChangeVoice(!changeVoice);
     }, launch ? 100 : null);
-    setTimeout(()=>{
-        setLaunch(false);
-    }, 2000);
+
+    let changeVoiceEffect = () => {
+        setLaunch(true);
+        setTimeout(()=>{
+            setLaunch(false);
+        }, 2000);
+    }
+    
 
     let sendDebug = () => {
         emitData('debug', 'testing');
@@ -46,14 +57,11 @@ function SocketHandler(props) {
         console.log('send change voice');
         setChangeVoice(!changeVoice);
     }
-    useEffect(()=>{
-        console.log('change~', changeVoice);
-    }, [changeVoice])
     let speakOver = () => {
         setSpeak(false);
         console.log('speak over', id);
         //emitData('debug', {id: id});
-        emitData('speakover', {id: id});
+        emitData('speakOver', {id: id});
     }
     return (<>
         {/* <button onClick={sendChangeVoice}></button> */}
