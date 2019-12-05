@@ -39,6 +39,58 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-42",
+					"linecount" : 2,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 513.0, 478.0, 90.0, 33.0 ],
+					"presentation_linecount" : 2,
+					"text" : "change voice\nof all websites"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"bgcolor" : [ 0.545098039215686, 0.545098039215686, 0.545098039215686, 0.0 ],
+					"id" : "obj-41",
+					"linecount" : 3,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 254.0, 186.399993896484375, 90.0, 47.0 ],
+					"presentation_linecount" : 3,
+					"text" : "only one website speaks."
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-40",
+					"linecount" : 5,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 593.5, 145.100006103515625, 115.0, 74.0 ],
+					"presentation_linecount" : 4,
+					"text" : "multiple websites speak at same time.\n(dict with text and percentage)"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-39",
+					"linecount" : 2,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 865.0, 227.0, 121.0, 33.0 ],
+					"text" : "BANG \nwhen speak end"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-36",
 					"maxclass" : "button",
 					"numinlets" : 1,
@@ -106,7 +158,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "float" ],
-					"patching_rect" : [ 683.0, 208.100006103515625, 39.0, 22.0 ],
+					"patching_rect" : [ 717.0, 214.100006103515625, 39.0, 22.0 ],
 					"text" : "/ 100."
 				}
 
@@ -119,7 +171,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 601.0, 208.100006103515625, 24.0, 24.0 ]
+					"patching_rect" : [ 601.0, 218.100006103515625, 24.0, 24.0 ]
 				}
 
 			}
@@ -141,7 +193,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "float" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 683.0, 162.100006103515625, 40.0, 40.0 ],
+					"patching_rect" : [ 717.0, 171.100006103515625, 40.0, 40.0 ],
 					"size" : 101.0
 				}
 
@@ -173,6 +225,13 @@
 			}
 , 			{
 				"box" : 				{
+					"bgcolor" : [ 0.301961, 0.301961, 0.301961, 1 ],
+					"bgcolor2" : [ 0.2, 0.2, 0.2, 1 ],
+					"bgfillcolor_color" : [ 0.2, 0.2, 0.2, 1 ],
+					"bgfillcolor_color1" : [ 0.301961, 0.301961, 0.301961, 1 ],
+					"bgfillcolor_color2" : [ 0.2, 0.2, 0.2, 1 ],
+					"bgfillcolor_type" : "gradient",
+					"gradient" : 1,
 					"id" : "obj-7",
 					"maxclass" : "message",
 					"numinlets" : 2,
@@ -241,7 +300,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "int", "", "" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 464.0, 56.5, 228.0, 84.5 ],
+					"patching_rect" : [ 464.0, 51.5, 228.0, 84.5 ],
 					"text" : "\"It takes a crane to build a crane.\nIt takes two floors to make a story.\nIt takes an egg to make a hen.\nIt takes a hen to make an egg.\nThere is no end to what I'm saying.\""
 				}
 
@@ -627,7 +686,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-100", 0 ],
-					"midpoints" : [ 610.5, 306.0, 588.0, 306.0, 588.0, 149.0, 874.5, 149.0 ],
+					"midpoints" : [ 610.5, 306.0, 588.0, 306.0, 588.0, 144.0, 874.5, 144.0 ],
 					"source" : [ "obj-26", 0 ]
 				}
 
