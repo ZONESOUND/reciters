@@ -9,6 +9,8 @@ function SocketHandler(props) {
     const [id, setId] = useState(-1);
     const [changeVoice, setChangeVoice] = useState(false);
     const [launch, setLaunch] = useState(false);
+    const [showForm, setShowForm] = useState(true);
+
     useEffect(()=>{
         if (props.start) {
             //setLaunch(true);
@@ -20,6 +22,8 @@ function SocketHandler(props) {
         connectSocket('/receiver');
         onSocket('debug', (data)=> {
             console.log(data);
+            if (data.mode === 'showForm') 
+                setShowForm(data.value);
         }); 
         onSocket('speak', (data)=> {
             
@@ -61,12 +65,14 @@ function SocketHandler(props) {
         setSpeak(false);
         console.log('speak over', id);
         //emitData('debug', {id: id});
-        emitData('speakOver', {id: id});
+        if (id !== -1)
+            emitData('speakOver', {id: id});
     }
+    
     return (<>
         {/* <button onClick={sendChangeVoice}></button> */}
         <Speak toSpeak={speak} sentence={sentence} speakOver={speakOver} 
-                changeVoice={changeVoice} form={false}/>
+                changeVoice={changeVoice} form={showForm}/>
     </>);
 }
 

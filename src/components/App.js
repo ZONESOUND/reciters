@@ -11,6 +11,9 @@ function App() {
   let selectStart= () => {
     setLanding(false);
     setTimeout(()=>{setSpeak(true)}, 1000);
+
+    //not sure where to put this...
+    window.speechSynthesis.speak(new SpeechSynthesisUtterance(''));
   }
   return (
   <div>

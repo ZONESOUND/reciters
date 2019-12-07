@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 34.0, 79.0, 943.0, 687.0 ],
+		"rect" : [ 34.0, 79.0, 946.0, 687.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -45,7 +45,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 513.0, 478.0, 90.0, 33.0 ],
-					"presentation_linecount" : 2,
 					"text" : "change voice\nof all websites"
 				}
 
@@ -59,7 +58,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 254.0, 186.399993896484375, 90.0, 47.0 ],
-					"presentation_linecount" : 3,
 					"text" : "only one website speaks."
 				}
 
@@ -72,7 +70,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 593.5, 145.100006103515625, 115.0, 74.0 ],
-					"presentation_linecount" : 4,
 					"text" : "multiple websites speak at same time.\n(dict with text and percentage)"
 				}
 
@@ -135,7 +132,7 @@
 					"outlettype" : [ "", "int", "", "" ],
 					"parameter_enable" : 0,
 					"patching_rect" : [ 301.0, 56.5, 153.0, 51.600006103515625 ],
-					"text" : "\"website, internet, google, yahoo, chrome.\""
+					"text" : "\"website, internet, google, yahoo, chrome\""
 				}
 
 			}
@@ -181,7 +178,7 @@
 					"maxclass" : "dict.view",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 601.0, 322.899993896484375, 100.0, 100.0 ]
+					"patching_rect" : [ 601.0, 322.899993896484375, 204.0, 103.0 ]
 				}
 
 			}
@@ -227,6 +224,7 @@
 				"box" : 				{
 					"bgcolor" : [ 0.301961, 0.301961, 0.301961, 1 ],
 					"bgcolor2" : [ 0.2, 0.2, 0.2, 1 ],
+					"bgfillcolor_autogradient" : 0.0,
 					"bgfillcolor_color" : [ 0.2, 0.2, 0.2, 1 ],
 					"bgfillcolor_color1" : [ 0.301961, 0.301961, 0.301961, 1 ],
 					"bgfillcolor_color2" : [ 0.2, 0.2, 0.2, 1 ],
@@ -275,7 +273,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 348.0, 243.0, 175.0, 35.0 ],
-					"text" : "speak \"website, internet, google, yahoo, chrome.\""
+					"text" : "speak \"website, internet, google, yahoo, chrome\""
 				}
 
 			}

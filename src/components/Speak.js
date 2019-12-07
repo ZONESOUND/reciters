@@ -13,10 +13,12 @@ const FullDiv = styled.div`
     props.bgColor === undefined ? "white" : props.bgColor};  
 `
 
+
 function Speak(props) {
   const synth = window.speechSynthesis;  
 
-  const [voices, getVoices] = useState(synth.getVoices());
+  const [first, setFirst] = useState(true);
+  const [voices, setVoices] = useState(synth.getVoices());
   const [voiceIndex, changeVoiceIdx] = useState(0);
   const [pitch, setPitch] = useState(1);
   const [rate, setRate] = useState(1);
@@ -27,6 +29,7 @@ function Speak(props) {
   const prevSpeak = usePrevious(toSpeak);
   const prevChangeVoice = usePrevious(changeVoice);
   const [revealSentence, setRevealSentence] = useState('');
+
   useEffect(()=>{
     if (!toSpeak || speaking) return;
     if (prevSpeak !== toSpeak && sentence !== undefined) {
@@ -40,7 +43,6 @@ function Speak(props) {
     }
   }, [changeVoice]);
 
-
   let populateVoice = () => {
     let v = synth.getVoices();
     for (var i=0; i<v.length; i++) {
@@ -49,7 +51,7 @@ function Speak(props) {
         break;
       }
     }
-    getVoices(v);
+    setVoices(v);
   }
   synth.onvoiceschanged = populateVoice;
   useInterval(() => {
@@ -76,9 +78,6 @@ function Speak(props) {
 
   }
 
-
-  
-
   const formProps = {
     onSubmitF: submitSpeak,
     voiceIndex: voiceIndex, 
@@ -97,7 +96,7 @@ function Speak(props) {
     <>
       {props.form && <SpeakForm {...formProps}/>}
       <InfoPage personName={personName} 
-        sentence={revealSentence} nameColor={speaking ? 'black': 'white'}/>
+        sentence={revealSentence} nameColor={speaking ? 'black': 'white'} /> 
       <Fade show={speaking} speed={'0.3s'}>
         <FullDiv/>
       </Fade>
