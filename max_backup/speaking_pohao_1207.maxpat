@@ -39,6 +39,19 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-15",
+					"linecount" : 4,
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 503.0, 306.0, 50.0, 62.0 ],
+					"text" : "“Hello how are you“”"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-12",
 					"maxclass" : "newobj",
 					"numinlets" : 2,
@@ -46,18 +59,6 @@
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 305.0, 106.100006103515625, 59.0, 22.0 ],
 					"text" : "route text"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-11",
-					"maxclass" : "button",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "bang" ],
-					"parameter_enable" : 0,
-					"patching_rect" : [ 496.0, 289.0, 24.0, 24.0 ]
 				}
 
 			}
@@ -291,13 +292,13 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-8",
-					"linecount" : 8,
+					"linecount" : 2,
 					"maxclass" : "message",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 272.0, 227.0, 175.0, 116.0 ],
-					"text" : "\"It takes a crane to build a crane.\nIt takes two floors to make a story.\nIt takes an egg to make a hen.\nIt takes a hen to make an egg.\nThere is no end to what I'm saying.\" s"
+					"patching_rect" : [ 272.0, 227.0, 175.0, 35.0 ],
+					"text" : "speak \"website, internet, google, yahoo, chrome.\""
 				}
 
 			}
@@ -308,7 +309,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 305.0, 156.100006103515625, 73.0, 22.0 ],
+					"patching_rect" : [ 305.0, 167.100006103515625, 73.0, 22.0 ],
 					"text" : "pak speak s"
 				}
 
@@ -316,14 +317,13 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-3",
-					"linecount" : 5,
 					"maxclass" : "textedit",
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "int", "", "" ],
 					"parameter_enable" : 0,
 					"patching_rect" : [ 470.0, 39.600006103515625, 228.0, 84.5 ],
-					"text" : "\"It takes a crane to build a crane.\nIt takes two floors to make a story.\nIt takes an egg to make a hen.\nIt takes a hen to make an egg.\nThere is no end to what I'm saying.\""
+					"text" : "“Hello how are you“”\n"
 				}
 
 			}
@@ -635,6 +635,15 @@
 		"lines" : [ 			{
 				"patchline" : 				{
 					"destination" : [ "obj-13", 0 ],
+					"order" : 0,
+					"source" : [ "obj-1", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-15", 1 ],
+					"order" : 1,
 					"source" : [ "obj-1", 0 ]
 				}
 
@@ -662,7 +671,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-5", 0 ],
+					"destination" : [ "obj-5", 1 ],
 					"source" : [ "obj-12", 0 ]
 				}
 
@@ -814,7 +823,14 @@
 			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "speaking max",
+				"name" : "max_socket.js",
+				"bootpath" : "~/SynologyDrive/ZONE SOUND/馬祖新村/gps/GPS_max",
+				"patcherrelativepath" : "../../../../SynologyDrive/ZONE SOUND/馬祖新村/gps/GPS_max",
+				"type" : "TEXT",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "max_backup",
 				"bootpath" : "~/Documents/GitHub/speaking",
 				"patcherrelativepath" : "..",
 				"type" : "fold",
