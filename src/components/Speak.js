@@ -17,7 +17,6 @@ const FullDiv = styled.div`
 function Speak(props) {
   const synth = window.speechSynthesis;  
 
-  const [first, setFirst] = useState(true);
   const [voices, setVoices] = useState(synth.getVoices());
   const [voiceIndex, changeVoiceIdx] = useState(0);
   const [pitch, setPitch] = useState(1);
@@ -63,7 +62,7 @@ function Speak(props) {
         props.speakOver();
         setSpeaking(false);
     }
-  }, speaking ? 200 : null);
+  }, speaking ? 100 : null);
 
   let submitSpeak = (event) => {
     event.preventDefault();

@@ -24,3 +24,4 @@ yarn-error.log*
 
 src/usages/config.js
 speaking\ max/config.js
+speaking\ max/node_modules
