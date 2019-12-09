@@ -3,17 +3,43 @@ const googleTrends = require('google-trends-api');
 
 
 Max.addHandler('daily', (geo) => {
-	console.log('daily!');
-	//, trendDate: new Date('2019-12-09')
 	googleTrends.dailyTrends({ geo: geo }, dailyTrend);
 });
 
-function dailyTrend(err, results) {
-	if(err) console.log('there was an error!', err);
-	else {
-		var data = JSON.parse(results)['default']['trendingSearchesDays'][0]['trendingSearches'];
-		Max.post(`Got ${data.length} trendings`);
-		Max.outlet("daily", data);
-	}
+Max.addHandler('realtime', (geo) => {
+	googleTrends.realTimeTrends({geo: geo, category: 'all'}, realtimeTrend);
+})
 
+function dailyTrend(err, results) {
+	if(err) {
+		Max.post('dailyTrend error');
+		console.log('In dailyTrend: ', err);
+	}
+	else {
+		if (results[0] != '{') {
+			Max.post('failed to parse result');
+			console.log('Failed to parse: ', results);
+			return;
+		}
+		var data = JSON.parse(results)['default']['trendingSearchesDays'][0]['trendingSearches'];
+		Max.post(`Got ${data.length} daily trends`);
+		Max.outlet('daily', data);
+	}
+}
+
+function realtimeTrend(err, results) {
+	if(err) {
+		Max.post('realtimeTrend error');
+		console.log('In dailyTrend: ', err);
+	}
+	else {
+		if (results[0] != '{') {
+			Max.post('failed to parse result');
+			console.log('Failed to parse: ', results);
+			return;
+		}
+		var data = JSON.parse(results)['storySummaries']['trendingStories'];
+		Max.post(`Got ${data.length} realtime trends.`);
+		Max.outlet("realtime", data);
+	}
 }
