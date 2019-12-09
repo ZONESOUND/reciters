@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 0,
-			"revision" : 3,
+			"revision" : 8,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
@@ -44,8 +44,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 513.0, 478.0, 90.0, 33.0 ],
-					"presentation_linecount" : 2,
+					"patching_rect" : [ 667.0, 10.0, 90.0, 33.0 ],
 					"text" : "change voice\nof all websites"
 				}
 
@@ -59,7 +58,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 254.0, 186.399993896484375, 90.0, 47.0 ],
-					"presentation_linecount" : 3,
 					"text" : "only one website speaks."
 				}
 
@@ -72,7 +70,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 593.5, 145.100006103515625, 115.0, 74.0 ],
-					"presentation_linecount" : 4,
 					"text" : "multiple websites speak at same time.\n(dict with text and percentage)"
 				}
 
@@ -128,14 +125,14 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-27",
-					"linecount" : 2,
+					"linecount" : 4,
 					"maxclass" : "textedit",
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "int", "", "" ],
 					"parameter_enable" : 0,
 					"patching_rect" : [ 301.0, 56.5, 153.0, 51.600006103515625 ],
-					"text" : "\"website, internet, google, yahoo, chrome.\""
+					"text" : "\"website, internet, google, yahoo, chrome, vimeo, soundcloud, twitter, instagram.\""
 				}
 
 			}
@@ -181,7 +178,7 @@
 					"maxclass" : "dict.view",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 601.0, 322.899993896484375, 100.0, 100.0 ]
+					"patching_rect" : [ 601.0, 322.899993896484375, 237.0, 132.0 ]
 				}
 
 			}
@@ -218,7 +215,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 607.0, 505.0, 123.0, 22.0 ],
+					"patching_rect" : [ 761.0, 37.0, 123.0, 22.0 ],
 					"text" : "prepend speakConfig"
 				}
 
@@ -227,6 +224,7 @@
 				"box" : 				{
 					"bgcolor" : [ 0.301961, 0.301961, 0.301961, 1 ],
 					"bgcolor2" : [ 0.2, 0.2, 0.2, 1 ],
+					"bgfillcolor_autogradient" : 0.0,
 					"bgfillcolor_color" : [ 0.2, 0.2, 0.2, 1 ],
 					"bgfillcolor_color1" : [ 0.301961, 0.301961, 0.301961, 1 ],
 					"bgfillcolor_color2" : [ 0.2, 0.2, 0.2, 1 ],
@@ -237,7 +235,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 607.0, 478.0, 77.0, 22.0 ],
+					"patching_rect" : [ 761.0, 10.0, 77.0, 22.0 ],
 					"text" : "changeVoice"
 				}
 
@@ -269,13 +267,13 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-8",
-					"linecount" : 2,
+					"linecount" : 3,
 					"maxclass" : "message",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 348.0, 243.0, 175.0, 35.0 ],
-					"text" : "speak \"website, internet, google, yahoo, chrome.\""
+					"patching_rect" : [ 348.0, 243.0, 175.0, 49.0 ],
+					"text" : "speak \"website, internet, google, yahoo, chrome, vimeo, soundcloud, twitter, instagram.\""
 				}
 
 			}
@@ -294,14 +292,14 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-3",
-					"linecount" : 5,
+					"linecount" : 3,
 					"maxclass" : "textedit",
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "int", "", "" ],
 					"parameter_enable" : 0,
 					"patching_rect" : [ 464.0, 51.5, 228.0, 84.5 ],
-					"text" : "\"It takes a crane to build a crane.\nIt takes two floors to make a story.\nIt takes an egg to make a hen.\nIt takes a hen to make an egg.\nThere is no end to what I'm saying.\""
+					"text" : "du du du du du du,\ndudu du du du.\ndu du du.\n"
 				}
 
 			}
@@ -353,8 +351,9 @@
 					"maxclass" : "bpatcher",
 					"name" : "n4m.monitor.maxpat",
 					"numinlets" : 1,
-					"numoutlets" : 0,
+					"numoutlets" : 1,
 					"offset" : [ 0.0, 0.0 ],
+					"outlettype" : [ "bang" ],
 					"patching_rect" : [ 993.5, 197.899993896484375, 400.0, 220.0 ],
 					"viewvisibility" : 1
 				}
@@ -388,7 +387,7 @@
 						"appversion" : 						{
 							"major" : 8,
 							"minor" : 0,
-							"revision" : 3,
+							"revision" : 8,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -468,8 +467,8 @@
 									"saved_object_attributes" : 									{
 										"autostart" : 0,
 										"defer" : 0,
-										"node" : "",
-										"npm" : "",
+										"node_bin_path" : "",
+										"npm_bin_path" : "",
 										"watch" : 0
 									}
 ,
@@ -599,8 +598,8 @@
 					"saved_object_attributes" : 					{
 						"autostart" : 0,
 						"defer" : 0,
-						"node" : "",
-						"npm" : "",
+						"node_bin_path" : "",
+						"npm_bin_path" : "",
 						"watch" : 0
 					}
 ,
@@ -751,7 +750,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-100", 0 ],
-					"midpoints" : [ 616.5, 537.0, 852.0, 537.0, 852.0, 150.0, 874.5, 150.0 ],
+					"midpoints" : [ 770.5, 141.0, 874.5, 141.0 ],
 					"source" : [ "obj-9", 0 ]
 				}
 
@@ -794,7 +793,7 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "speaking max",
-				"bootpath" : "~/Documents/Zonesound/speaking",
+				"bootpath" : "~/Documents/GitHub/speaking",
 				"patcherrelativepath" : "..",
 				"type" : "fold",
 				"implicit" : 1
@@ -916,8 +915,8 @@
 , 			{
 				"name" : "newobjYellow-1",
 				"default" : 				{
-					"accentcolor" : [ 0.82517, 0.78181, 0.059545, 1.0 ],
-					"fontsize" : [ 12.059008 ]
+					"fontsize" : [ 12.059008 ],
+					"accentcolor" : [ 0.82517, 0.78181, 0.059545, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -926,8 +925,8 @@
 , 			{
 				"name" : "newobjYellow-2",
 				"default" : 				{
-					"accentcolor" : [ 0.82517, 0.78181, 0.059545, 1.0 ],
-					"fontsize" : [ 12.059008 ]
+					"fontsize" : [ 12.059008 ],
+					"accentcolor" : [ 0.82517, 0.78181, 0.059545, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
