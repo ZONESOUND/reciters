@@ -74,6 +74,7 @@ function addSocketListener() {
 
 		Max.addHandler('speakAdvance', (dict) => {
 			Max.post(dict);
+			Max.post(dict.dict);
 			//socket.emit('', message);
 			sender({name:'speakAdvance', value:dict});
 		});

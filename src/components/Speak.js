@@ -25,17 +25,20 @@ function Speak(props) {
   const [speaking, setSpeaking] = useState(false);
 
   //const [sentence, setSentence] = useState('');
-  const {toSpeak, sentence, changeVoice} = props;
+  const {toSpeak, data, changeVoice} = props;
   const prevSpeak = usePrevious(toSpeak);
   const prevChangeVoice = usePrevious(changeVoice);
   const [revealSentence, setRevealSentence] = useState('');
 
   useEffect(()=>{
     if (!toSpeak || speaking) return;
-    if (prevSpeak !== toSpeak && sentence !== undefined) {
-      speakTxt(sentence);
+    if (prevSpeak !== toSpeak && data.text) {
+      if (data.rate) setRate(data.rate);
+      if (data.pitch) setPitch(data.pitch);
+      //speakTxt(data.text);
+      speakTxtWithPR(data.text, data.pitch?data.pitch:pitch, data.rate?data.rate:rate);
     }
-  }, [toSpeak, sentence]);
+  }, [toSpeak, data]);
 
   useEffect(()=>{
     if (prevChangeVoice !== changeVoice) {
@@ -75,7 +78,16 @@ function Speak(props) {
     utterThis.pitch = pitch;
     utterThis.rate = rate;
     synth.speak(utterThis);
+  }
 
+  let speakTxtWithPR = (txt, p, r) => {
+    setSpeaking(true);
+    setRevealSentence(txt);
+    let utterThis = new SpeechSynthesisUtterance(txt);
+    utterThis.voice = voices[voiceIndex];
+    utterThis.pitch = p;
+    utterThis.rate = r;
+    synth.speak(utterThis);
   }
 
   const formProps = {

@@ -10,6 +10,7 @@ function SocketHandler(props) {
     const [changeVoice, setChangeVoice] = useState(false);
     const [launch, setLaunch] = useState(false);
     const [showForm, setShowForm] = useState(true);
+    const [speakData, setSpeakData] = useState({});
 
     useEffect(()=>{
         if (props.start) {
@@ -29,7 +30,8 @@ function SocketHandler(props) {
             
             if (!speak) {
                 console.log('speak!', data);
-                setSentence(data.text);
+                //setSentence(data.text);
+                setSpeakData(data);
                 setId(data.id);
                 setSpeak(true);
             }
@@ -71,7 +73,7 @@ function SocketHandler(props) {
     
     return (<>
         {/* <button onClick={sendChangeVoice}></button> */}
-        <Speak toSpeak={speak} sentence={sentence} speakOver={speakOver} 
+        <Speak toSpeak={speak} data={speakData} speakOver={speakOver} 
                 changeVoice={changeVoice} form={showForm}/>
     </>);
 }
