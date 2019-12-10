@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 262.0, 263.0, 883.0, 687.0 ],
+		"rect" : [ 34.0, 79.0, 718.0, 687.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -39,8 +39,21 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-16",
+					"maxclass" : "toggle",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "int" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 879.5, 281.0, 24.0, 24.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"format" : 6,
 					"id" : "obj-15",
-					"maxclass" : "number",
+					"maxclass" : "flonum",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
@@ -51,8 +64,9 @@
 			}
 , 			{
 				"box" : 				{
+					"format" : 6,
 					"id" : "obj-14",
-					"maxclass" : "number",
+					"maxclass" : "flonum",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
@@ -334,7 +348,7 @@
 					"outlettype" : [ "", "int", "", "" ],
 					"parameter_enable" : 0,
 					"patching_rect" : [ 464.0, 51.5, 228.0, 84.5 ],
-					"text" : "du du du du du du,\ndudu du du du.\ndu du du.\n"
+					"text" : "\"du du du du du du\ndudu du du du\ndu du du\"\n"
 				}
 
 			}
@@ -761,6 +775,13 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-16", 0 ],
+					"source" : [ "obj-31", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-27", 0 ],
 					"source" : [ "obj-35", 0 ]
 				}
@@ -848,7 +869,7 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "speaking max",
-				"bootpath" : "~/Documents/Zonesound/speaking",
+				"bootpath" : "~/Documents/Zonesound/Project/speaking",
 				"patcherrelativepath" : "..",
 				"type" : "fold",
 				"implicit" : 1
