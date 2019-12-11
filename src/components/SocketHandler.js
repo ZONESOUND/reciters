@@ -1,33 +1,39 @@
 import React, {useState, useEffect} from 'react';
-import {connectSocket, onSocket, emitData } from '../usages/socketUsage';
+import {connectSocket, onSocket, emitData, isSocketConnect } from '../usages/socketUsage';
 import Speak from './Speak';
 import {useInterval} from '../usages/tool';
+import Fade from './Fade';
+import {FullDiv} from '../usages/cssUsage';
 
 function SocketHandler(props) {
     const [speak, setSpeak] = useState(false);
-    const [sentence, setSentence] = useState('');
     const [id, setId] = useState(-1);
     const [changeVoice, setChangeVoice] = useState(false);
     const [launch, setLaunch] = useState(false);
-    const [showForm, setShowForm] = useState(true);
+    const [showForm, setShowForm] = useState(false);
     const [speakData, setSpeakData] = useState({});
     const [voice, setVoice] = useState(); 
+    const [socketConnect, setSocketConnect] = useState(null);
 
     useEffect(()=>{
-        if (props.start) {
-            //setLaunch(true);
+        //if (props.start && socketConnect) {
+        if (socketConnect) {
             changeVoiceEffect();
         }
-    }, [props.start])
+    }, [socketConnect])
 
+    //check if user changed
     useEffect(() => {
         if (!launch && voice) {
-            console.log('launch!', voice);
+            emitData('speakConfig', {mode: 'changeVoice', voice: voice});
         }
     }, [launch, voice])
 
     useState(()=> {
-        connectSocket('/receiver');
+        connectSocket('/receiver', ()=>{setSocketConnect(true);});
+        onSocket('disconnect', ()=>{
+            setSocketConnect(false);
+        })
         onSocket('debug', (data)=> {
             console.log(data);
             if (data.mode === 'showForm') 
@@ -48,6 +54,10 @@ function SocketHandler(props) {
             console.log(data);
             if (data.mode === 'changeVoice') 
                 changeVoiceEffect();
+            else if (data.mode === 'showForm')
+                setShowForm(true);
+            else if (data.mode === 'hideForm') 
+                setShowForm(false);
         }); 
     });
 
@@ -78,17 +88,18 @@ function SocketHandler(props) {
     }
     let changeVoiceCallback = (voice) => {
         setVoice(voice);
-        // if (!launch) {
-        //     //emit server!
-        //     console.log('changed!', voice);
-        // }
     }
     
     return (<>
         {/* <button onClick={sendChangeVoice}></button> */}
-        <Speak toSpeak={speak} data={speakData} speakOver={speakOver} 
-                changeVoice={changeVoice} changeVoiceCallback={changeVoiceCallback}
-                form={showForm}/>
+        <Fade show={socketConnect}>
+            <Speak toSpeak={speak} data={speakData} speakOver={speakOver} 
+                    changeVoice={changeVoice} changeVoiceCallback={changeVoiceCallback}
+                    form={showForm}/>
+        </Fade>
+        <Fade show={socketConnect===false}>
+            <FullDiv bgColor="black"><span>{'CONNECTING SERVER'}</span></FullDiv>
+        </Fade>
     </>);
 }
 

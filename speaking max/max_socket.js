@@ -15,6 +15,8 @@ const localhostIP = 'http://localhost:8000';
 var socket;
 var namespace = '/controller';
 
+var nextEnable = true;
+
 Max.post('script start');
 connectServer();
 
@@ -50,9 +52,13 @@ function addSocketListener() {
 			Max.post(message)
 		});
 
+		socket.on('speakConfig', (message) => {
+			Max.outlet(message.mode, message.data);
+		});
+
 		socket.on('speakOver', (message) => {
 			//Max.bang();
-			Max.outlet(true);
+			Max.outlet('speakover', true);
 		});
 
 		socket.on('osc', (message) => {
@@ -62,19 +68,21 @@ function addSocketListener() {
 
 		//sender: 
 	    const sender = function (data) {
-			Max.post(data);
+			if (!nextEnable) return;
+			next();
+			Max.post('send~~~', data);
 			socket.emit(data.name, data.value);
+			
 		};
 
 		Max.addHandler('speak', (message) => {
-			Max.post(message);
+			//Max.post(message);
 			//socket.emit('', message);
 			sender({name:'speak', value:message});
 		});
 
 		Max.addHandler('speakAdvance', (dict) => {
-			Max.post(dict);
-			Max.post(dict.dict);
+			//Max.post(dict);
 			//socket.emit('', message);
 			sender({name:'speakAdvance', value:dict});
 		});
@@ -86,5 +94,10 @@ function addSocketListener() {
 		});
 
 	})
+}
+
+function next() {
+	nextEnable = false;
+	setTimeout(()=>{nextEnable = true;}, 10);
 }
 

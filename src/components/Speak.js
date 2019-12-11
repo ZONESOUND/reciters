@@ -2,23 +2,34 @@ import React, {useState, useEffect} from 'react';
 import { useInterval, usePrevious } from '../usages/tool';
 import InfoPage from './InfoPage';
 import Fade from './Fade';
-import styled from 'styled-components'
+import {FullDiv} from '../usages/cssUsage';
+import {excludeName} from '../usages/voiceUsage';
 
-const FullDiv = styled.div`
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  z-index: -10;
-  background: ${props => 
-    props.bgColor === undefined ? "white" : props.bgColor};  
-`
 
+// const FullDiv = styled.div`
+//   width: 100%;
+//   height: 100%;
+//   position: absolute;
+//   z-index: -10;
+//   background: ${props => 
+//     props.bgColor === undefined ? "white" : props.bgColor};  
+// `
 
 function Speak(props) {
-  const synth = window.speechSynthesis;  
+  let genVoice = () => {
+    let v = synth.getVoices();
+    let prevName = '';
+    for (var i=0; i<v.length; i++) {
+      while ((excludeName.has(v[i].name) || v[i].name === prevName) && i<v.length) v.splice(i, 1);
+      prevName = v[i].name;
+      if (v[i].default) changeVoiceIdx(i);
+    }
+    return v;
+  }
 
-  const [voices, setVoices] = useState(synth.getVoices());
+  const synth = window.speechSynthesis;  
   const [voiceIndex, changeVoiceIdx] = useState(0);
+  const [voices, setVoices] = useState(()=>{return genVoice();});
   const [pitch, setPitch] = useState(1);
   const [rate, setRate] = useState(1);
   const [speaking, setSpeaking] = useState(false);
@@ -50,14 +61,7 @@ function Speak(props) {
   }, [voiceIndex]);
 
   let populateVoice = () => {
-    let v = synth.getVoices();
-    for (var i=0; i<v.length; i++) {
-      if (v[i].default) {
-        changeVoiceIdx(i);
-        break;
-      }
-    }
-    setVoices(v);
+    setVoices(genVoice());
   }
   synth.onvoiceschanged = populateVoice;
   useInterval(() => {

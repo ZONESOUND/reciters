@@ -10,7 +10,7 @@ function App() {
   const [speak, setSpeak] = useState(false);
   let selectStart= () => {
     setLanding(false);
-    setTimeout(()=>{setSpeak(true)}, 1000);
+    setSpeak(true);
 
     //not sure where to put this...
     window.speechSynthesis.speak(new SpeechSynthesisUtterance(''));
