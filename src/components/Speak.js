@@ -45,6 +45,10 @@ function Speak(props) {
     }
   }, [changeVoice]);
 
+  useEffect(()=>{
+    props.changeVoiceCallback({name:voices[voiceIndex].name, lang:voices[voiceIndex].lang});
+  }, [voiceIndex]);
+
   let populateVoice = () => {
     let v = synth.getVoices();
     for (var i=0; i<v.length; i++) {
@@ -119,7 +123,6 @@ function SpeakForm(props) {
   const {onSubmitF, voiceIndex, 
         voiceOnChanged, voices, pitch, rate, 
         pitchOnChanged, rateOnChanged} = props;
-  console.log('speak form', voiceIndex);
   return (
     <form onSubmit={onSubmitF}>
       <select value={voiceIndex} onChange={(e) => {voiceOnChanged(e.target.value)}}>

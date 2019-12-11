@@ -11,6 +11,7 @@ function SocketHandler(props) {
     const [launch, setLaunch] = useState(false);
     const [showForm, setShowForm] = useState(true);
     const [speakData, setSpeakData] = useState({});
+    const [voice, setVoice] = useState(); 
 
     useEffect(()=>{
         if (props.start) {
@@ -18,6 +19,12 @@ function SocketHandler(props) {
             changeVoiceEffect();
         }
     }, [props.start])
+
+    useEffect(() => {
+        if (!launch && voice) {
+            console.log('launch!', voice);
+        }
+    }, [launch, voice])
 
     useState(()=> {
         connectSocket('/receiver');
@@ -54,7 +61,6 @@ function SocketHandler(props) {
             setLaunch(false);
         }, 2000);
     }
-    
 
     let sendDebug = () => {
         emitData('debug', 'testing');
@@ -70,11 +76,19 @@ function SocketHandler(props) {
         if (id !== -1)
             emitData('speakOver', {id: id});
     }
+    let changeVoiceCallback = (voice) => {
+        setVoice(voice);
+        // if (!launch) {
+        //     //emit server!
+        //     console.log('changed!', voice);
+        // }
+    }
     
     return (<>
         {/* <button onClick={sendChangeVoice}></button> */}
         <Speak toSpeak={speak} data={speakData} speakOver={speakOver} 
-                changeVoice={changeVoice} form={showForm}/>
+                changeVoice={changeVoice} changeVoiceCallback={changeVoiceCallback}
+                form={showForm}/>
     </>);
 }
 
