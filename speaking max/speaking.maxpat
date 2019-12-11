@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 34.0, 79.0, 1212.0, 687.0 ],
+		"rect" : [ 272.0, -878.0, 1212.0, 687.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -45,7 +45,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 177.0, 7.899993896484375, 150.0, 37.0 ],
-					"presentation_linecount" : 2,
 					"text" : "可以幫忙測試~ 開5,6 個網頁的效果嗎?"
 				}
 
@@ -94,7 +93,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 170.0, 353.899993896484375, 189.0, 62.0 ],
+					"patching_rect" : [ 170.0, 353.899993896484375, 193.0, 62.0 ],
 					"text" : "\"And as for you, Bill, when you're on the Net, are you lost? Or found ? And the rest of us—lost or found—are we on it, or in it?\""
 				}
 
@@ -324,8 +323,8 @@
 					"numinlets" : 4,
 					"numoutlets" : 1,
 					"outlettype" : [ "dictionary" ],
-					"patching_rect" : [ 477.0, 272.5, 208.0, 22.0 ],
-					"text" : "dict.pack text: percentage: rate: pitch:"
+					"patching_rect" : [ 477.0, 272.5, 221.0, 22.0 ],
+					"text" : "dict.pack text: percentage: rate:1 pitch:1"
 				}
 
 			}
@@ -393,7 +392,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 175.5, 228.600006103515625, 145.0, 49.0 ],
+					"patching_rect" : [ 175.5, 228.600006103515625, 148.0, 49.0 ],
 					"text" : "\"A apple, B bell, C cisco, D dog, E egg, F firefox, G google.\""
 				}
 
@@ -588,8 +587,6 @@
 									"saved_object_attributes" : 									{
 										"autostart" : 0,
 										"defer" : 0,
-										"node_bin_path" : "",
-										"npm_bin_path" : "",
 										"watch" : 0
 									}
 ,
@@ -719,8 +716,6 @@
 					"saved_object_attributes" : 					{
 						"autostart" : 0,
 						"defer" : 0,
-						"node_bin_path" : "",
-						"npm_bin_path" : "",
 						"watch" : 0
 					}
 ,
