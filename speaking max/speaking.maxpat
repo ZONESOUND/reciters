@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 45.0, 99.0, 836.0, 687.0 ],
+		"rect" : [ 41.0, 150.0, 836.0, 687.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -82,7 +82,6 @@
 						"tags" : "",
 						"style" : "",
 						"subpatcher_template" : "",
-						"visible" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
 									"id" : "obj-18",
@@ -605,7 +604,8 @@
  ]
 					}
 ,
-					"patching_rect" : [ 739.5, 375.5, 74.0, 22.0 ],
+					"patching_rect" : [ 757.5, 493.899993896484375, 84.0, 22.0 ],
+					"presentation_linecount" : 2,
 					"saved_object_attributes" : 					{
 						"description" : "",
 						"digest" : "",
@@ -613,7 +613,7 @@
 						"tags" : ""
 					}
 ,
-					"text" : "p gen_effect"
+					"text" : "p send_sound"
 				}
 
 			}
