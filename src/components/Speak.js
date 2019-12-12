@@ -6,15 +6,6 @@ import {FullDiv} from '../usages/cssUsage';
 import {excludeName} from '../usages/voiceUsage';
 
 
-// const FullDiv = styled.div`
-//   width: 100%;
-//   height: 100%;
-//   position: absolute;
-//   z-index: -10;
-//   background: ${props => 
-//     props.bgColor === undefined ? "white" : props.bgColor};  
-// `
-
 function Speak(props) {
   let genVoice = () => {
     let v = synth.getVoices();
@@ -69,6 +60,7 @@ function Speak(props) {
         //console.log('finish speak!');
         props.speakOver();
         setSpeaking(false);
+        setRevealSentence("");
     }
   }, speaking ? 100 : null);
 
@@ -115,7 +107,7 @@ function Speak(props) {
     <>
       {props.form && <SpeakForm {...formProps}/>}
       <InfoPage personName={personName} 
-        sentence={revealSentence} nameColor={speaking ? 'black': 'white'} /> 
+        sentence={revealSentence} speakingVoice={props.nowSpeak} nameColor={speaking ? 'black': 'white'} /> 
       <Fade show={speaking} speed={'0.3s'}>
         <FullDiv/>
       </Fade>

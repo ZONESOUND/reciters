@@ -1,9 +1,11 @@
 import React, {useState, useEffect} from 'react';
-import {connectSocket, onSocket, emitData, isSocketConnect } from '../usages/socketUsage';
+import {connectSocket, onSocket, emitData } from '../usages/socketUsage';
 import Speak from './Speak';
 import {useInterval} from '../usages/tool';
 import Fade from './Fade';
 import {FullDiv} from '../usages/cssUsage';
+import MusicBoxMin from './MusicBox';
+
 
 function SocketHandler(props) {
     const [speak, setSpeak] = useState(false);
@@ -14,6 +16,7 @@ function SocketHandler(props) {
     const [speakData, setSpeakData] = useState({});
     const [voice, setVoice] = useState(); 
     const [socketConnect, setSocketConnect] = useState(null);
+    const [nowSpeak, setNowSpeak] = useState([]);
 
     useEffect(()=>{
         //if (props.start && socketConnect) {
@@ -25,6 +28,7 @@ function SocketHandler(props) {
     //check if user changed
     useEffect(() => {
         if (!launch && voice) {
+            console.log('emit voice!');
             emitData('speakConfig', {mode: 'changeVoice', voice: voice});
         }
     }, [launch, voice])
@@ -58,7 +62,10 @@ function SocketHandler(props) {
                 setShowForm(true);
             else if (data.mode === 'hideForm') 
                 setShowForm(false);
+            else if (data.mode === 'nowSpeak')
+                setNowSpeak(data.data);
         }); 
+        
     });
 
     useInterval(() => {
@@ -84,22 +91,25 @@ function SocketHandler(props) {
         console.log('speak over', id);
         //emitData('debug', {id: id});
         if (id !== -1)
-            emitData('speakOver', {id: id});
+            emitData('speakOver', {id: id, voice: voice});
     }
     let changeVoiceCallback = (voice) => {
         setVoice(voice);
     }
     
     return (<>
-        {/* <button onClick={sendChangeVoice}></button> */}
+        {/* <button onClick={t}></button> */}
+        {/* <EffectBox controlData={controlData}/> */}
+        <MusicBoxMin stop={speak}/>
         <Fade show={socketConnect}>
             <Speak toSpeak={speak} data={speakData} speakOver={speakOver} 
                     changeVoice={changeVoice} changeVoiceCallback={changeVoiceCallback}
-                    form={showForm}/>
+                    nowSpeak={nowSpeak} form={showForm}/>
         </Fade>
         <Fade show={socketConnect===false}>
             <FullDiv bgColor="black"><span>{'CONNECTING SERVER'}</span></FullDiv>
         </Fade>
+        
     </>);
 }
 

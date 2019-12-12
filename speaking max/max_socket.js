@@ -66,11 +66,15 @@ function addSocketListener() {
 			Max.outlet(message)
 		});
 
+		socket.on('showClient', (data) => {
+			Max.post(data);
+		})
+
 		//sender: 
 	    const sender = function (data) {
 			if (!nextEnable) return;
 			next();
-			Max.post('send~~~', data);
+			Max.post(data);
 			socket.emit(data.name, data.value);
 			
 		};
@@ -88,16 +92,27 @@ function addSocketListener() {
 		});
 
 		Max.addHandler('speakConfig', (message) => {
-			Max.post(message);
+			//Max.post(message);
 			//socket.emit('', message);
 			sender({name:'speakConfig', value:message});
 		});
 
+		Max.addHandler('show', (order) => {
+			socket.emit('showClient', order);
+		});
+
+		Max.addHandler('showArr', (...order) => {
+			socket.emit('showClient', order);
+		});
+
+		Max.addHandler("controlData", (...args) => {
+			sender({name:'controlData', value:args[0]});
+		});
 	})
 }
 
 function next() {
 	nextEnable = false;
-	setTimeout(()=>{nextEnable = true;}, 10);
+	setTimeout(()=>{nextEnable = true;}, 100);
 }
 
