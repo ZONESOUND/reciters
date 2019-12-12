@@ -26,11 +26,7 @@ const InfoWrapper = styled.div`
     align-items: center;
     flex-direction: column;
     `;
-const WaveWrapper = styled.div`
-    width: 60%;
-    height: 100em;
-    bottom: 10%
-`;
+
 
 function InfoPage(props) {
     const maxLen = 10;
@@ -38,6 +34,7 @@ function InfoPage(props) {
     let num = 0;
     if (props.speakingVoice.length > 0) {
         props.speakingVoice.forEach((v)=>{
+            if (v == null) return;
             v = JSON.parse(v);
             if (!v.name) return;
             if (num > maxLen) {
@@ -79,8 +76,9 @@ class Wave extends React.Component {
         this.setState({siriWave:new SiriWave({
             container: this.myRef.current,
             style: 'ios9',
-            //height: 200,
-            cover: true,
+            width: 320,
+            height: 100,
+            //cover: true,
             speed: 0.2,
             amplitude: 0.1,
             autostart: true
@@ -103,7 +101,7 @@ class Wave extends React.Component {
 
     render() {
         return (<>
-            <WaveWrapper ref={this.myRef}/>
+            <div ref={this.myRef}></div>
         </>);
     }
   }
