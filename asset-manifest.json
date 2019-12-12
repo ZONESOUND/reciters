@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/speaking/static/css/main.a3577e0c.chunk.css",
-    "main.js": "/speaking/static/js/main.1a0ffa36.chunk.js",
-    "main.js.map": "/speaking/static/js/main.1a0ffa36.chunk.js.map",
+    "main.js": "/speaking/static/js/main.e276f952.chunk.js",
+    "main.js.map": "/speaking/static/js/main.e276f952.chunk.js.map",
     "runtime-main.js": "/speaking/static/js/runtime-main.477aa4a2.js",
     "runtime-main.js.map": "/speaking/static/js/runtime-main.477aa4a2.js.map",
     "static/js/2.08835eeb.chunk.js": "/speaking/static/js/2.08835eeb.chunk.js",
     "static/js/2.08835eeb.chunk.js.map": "/speaking/static/js/2.08835eeb.chunk.js.map",
     "index.html": "/speaking/index.html",
-    "precache-manifest.dafe4dc36b757f74539912e28089eccc.js": "/speaking/precache-manifest.dafe4dc36b757f74539912e28089eccc.js",
+    "precache-manifest.053575a8e2a178073ff6dd4d5b3d71a4.js": "/speaking/precache-manifest.053575a8e2a178073ff6dd4d5b3d71a4.js",
     "service-worker.js": "/speaking/service-worker.js",
     "static/css/main.a3577e0c.chunk.css.map": "/speaking/static/css/main.a3577e0c.chunk.css.map",
     "static/media/s1_1.mp3": "/speaking/static/media/s1_1.ea669680.mp3",
@@ -74,6 +74,6 @@
     "static/js/runtime-main.477aa4a2.js",
     "static/js/2.08835eeb.chunk.js",
     "static/css/main.a3577e0c.chunk.css",
-    "static/js/main.1a0ffa36.chunk.js"
+    "static/js/main.e276f952.chunk.js"
   ]
 }
