@@ -5,6 +5,7 @@ import {useInterval} from '../usages/tool';
 import Fade from './Fade';
 import {FullDiv} from '../usages/cssUsage';
 import MusicBoxMin from './MusicBox';
+import EffectBox from './EffectBox';
 
 
 function SocketHandler(props) {
@@ -100,7 +101,8 @@ function SocketHandler(props) {
     return (<>
         {/* <button onClick={t}></button> */}
         {/* <EffectBox controlData={controlData}/> */}
-        <MusicBoxMin stop={speak}/>
+        {/* <MusicBoxMin stop={speak}/> */}
+        <EffectBox show={socketConnect} stop={speak} />
         <Fade show={socketConnect}>
             <Speak toSpeak={speak} data={speakData} speakOver={speakOver} 
                     changeVoice={changeVoice} changeVoiceCallback={changeVoiceCallback}

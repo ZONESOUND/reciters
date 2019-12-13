@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import {onSocket} from '../usages/socketUsage';
 import Tone from 'tone';
+import AnimeBox from './AnimeBox';
 
 let soundStateNum = [15, 36, 48, 58];
 let soundFiles = [];
@@ -37,11 +38,15 @@ soundPreload();
 function MusicBoxMin(props) {
     //const [soundPlayer] = useState(soundPreload());
     const [nowOrder, setNowOrder] = useState(0);
+    const [refresh, setRefresh] = useState(false);
+    
+    let processData = (data) => {
+        //let {sound} = data;
+        if (data.sound) processSound(data.sound);
+    }
     useState(()=>{
-        onSocket('controlData', (data)=>{
-            console.log('controlData', data);
-            if (data.sound) processData(data.sound);
-        })
+        if (props.socket)
+            onSocket('controlData', processData);
     })
     
     let loadFinish = () => {
@@ -58,7 +63,14 @@ function MusicBoxMin(props) {
         }
     },[props.stop])
 
-    let processData = (data) => {
+    useEffect(()=>{
+        if (props.refresh != refresh && props.data && JSON.stringify(props.data) !== '{}' ){
+            processSound(props.data);
+        }
+        setRefresh(props.refresh);
+    }, [props.refresh])
+
+    let processSound = (data) => {
         if (props.stop) return;
 
         console.log(data);
@@ -80,7 +92,11 @@ function MusicBoxMin(props) {
             stopNow();
             //console.log('o', order);
             if ('volume' in data) setVolume(order, data.volume);
-            if (data.delay > 0) {
+            if ('delayFix' in data) {
+                setTimeout(() => {
+                    playSound(order);
+                }, data.delayFix);
+            } else if (data.delay > 0) {
                 setTimeout(() => {
                     playSound(order);
                 }, Math.floor(Math.random()*data.delay));
@@ -130,7 +146,7 @@ function MusicBoxMin(props) {
         playSound(order);
     }
 
-    return(<div></div>);
+    return(<></>);
 }
 
 export default MusicBoxMin;
