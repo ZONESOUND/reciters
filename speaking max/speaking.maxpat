@@ -39,6 +39,119 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-16",
+					"maxclass" : "newobj",
+					"numinlets" : 0,
+					"numoutlets" : 0,
+					"patcher" : 					{
+						"fileversion" : 1,
+						"appversion" : 						{
+							"major" : 8,
+							"minor" : 0,
+							"revision" : 8,
+							"architecture" : "x64",
+							"modernui" : 1
+						}
+,
+						"classnamespace" : "box",
+						"rect" : [ 59.0, 104.0, 844.0, 509.0 ],
+						"bglocked" : 0,
+						"openinpresentation" : 0,
+						"default_fontsize" : 12.0,
+						"default_fontface" : 0,
+						"default_fontname" : "Arial",
+						"gridonopen" : 1,
+						"gridsize" : [ 15.0, 15.0 ],
+						"gridsnaponopen" : 1,
+						"objectsnaponopen" : 1,
+						"statusbarvisible" : 2,
+						"toolbarvisible" : 1,
+						"lefttoolbarpinned" : 0,
+						"toptoolbarpinned" : 0,
+						"righttoolbarpinned" : 0,
+						"bottomtoolbarpinned" : 0,
+						"toolbars_unpinned_last_save" : 0,
+						"tallnewobj" : 0,
+						"boxanimatetime" : 200,
+						"enablehscroll" : 1,
+						"enablevscroll" : 1,
+						"devicewidth" : 0.0,
+						"description" : "",
+						"digest" : "",
+						"tags" : "",
+						"style" : "",
+						"subpatcher_template" : "",
+						"visible" : 1,
+						"boxes" : [ 							{
+								"box" : 								{
+									"id" : "obj-2",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 3,
+									"outlettype" : [ "", "bang", "int" ],
+									"patching_rect" : [ 414.0, 127.0, 75.0, 22.0 ],
+									"text" : "text billgates"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-1",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 3,
+									"outlettype" : [ "", "bang", "int" ],
+									"patching_rect" : [ 80.0, 127.0, 66.0, 22.0 ],
+									"text" : "text sekula"
+								}
+
+							}
+ ],
+						"lines" : [  ]
+					}
+,
+					"patching_rect" : [ 55.0, 60.0, 31.0, 22.0 ],
+					"saved_object_attributes" : 					{
+						"description" : "",
+						"digest" : "",
+						"globalpatchername" : "",
+						"tags" : ""
+					}
+,
+					"text" : "p s1"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"floatoutput" : 1,
+					"id" : "obj-11",
+					"maxclass" : "dial",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "float" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 596.666666666666629, 209.0, 40.0, 40.0 ],
+					"size" : 2.0
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"floatoutput" : 1,
+					"id" : "obj-7",
+					"maxclass" : "dial",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "float" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 664.0, 209.0, 40.0, 40.0 ],
+					"size" : 2.0
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-57",
 					"maxclass" : "newobj",
 					"numinlets" : 0,
@@ -82,7 +195,6 @@
 						"tags" : "",
 						"style" : "",
 						"subpatcher_template" : "",
-						"visible" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
 									"id" : "obj-22",
@@ -758,18 +870,6 @@
 			}
 , 			{
 				"box" : 				{
-					"id" : "obj-34",
-					"linecount" : 2,
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 162.0, 33.899993896484375, 150.0, 37.0 ],
-					"text" : "可以幫忙測試~ 開5,6 個網頁的效果嗎?"
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"id" : "obj-33",
 					"linecount" : 2,
 					"maxclass" : "comment",
@@ -838,7 +938,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 651.0, 263.100006103515625, 50.0, 22.0 ]
+					"patching_rect" : [ 664.0, 263.0, 50.0, 22.0 ]
 				}
 
 			}
@@ -851,7 +951,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 588.0, 263.0, 50.0, 22.0 ]
+					"patching_rect" : [ 596.666666666666629, 263.0, 50.0, 22.0 ]
 				}
 
 			}
@@ -973,7 +1073,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "float" ],
-					"patching_rect" : [ 525.0, 267.100006103515625, 39.0, 22.0 ],
+					"patching_rect" : [ 529.0, 263.0, 39.0, 22.0 ],
 					"text" : "/ 100."
 				}
 
@@ -1008,8 +1108,8 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "float" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 525.0, 223.0, 40.0, 40.0 ],
-					"size" : 101.0
+					"patching_rect" : [ 529.0, 214.0, 40.0, 40.0 ],
+					"size" : 100.0
 				}
 
 			}
@@ -1106,7 +1206,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 947.8333740234375, 88.600006103515625, 150.0, 20.0 ],
+					"patching_rect" : [ 1264.8333740234375, 13.600006103515625, 150.0, 20.0 ],
 					"text" : "install NPM (once)"
 				}
 
@@ -1131,7 +1231,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 947.8333740234375, 113.600006103515625, 100.0, 22.0 ],
+					"patching_rect" : [ 1264.8333740234375, 38.600006103515625, 100.0, 22.0 ],
 					"text" : "script npm install"
 				}
 
@@ -1264,8 +1364,6 @@
 									"saved_object_attributes" : 									{
 										"autostart" : 0,
 										"defer" : 0,
-										"node_bin_path" : "",
-										"npm_bin_path" : "",
 										"watch" : 0
 									}
 ,
@@ -1337,7 +1435,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 947.8333740234375, 147.600006103515625, 44.0, 22.0 ],
+					"patching_rect" : [ 1264.8333740234375, 72.600006103515625, 44.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"description" : "",
 						"digest" : "",
@@ -1355,7 +1453,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 947.8333740234375, 178.100006103515625, 122.0, 22.0 ],
+					"patching_rect" : [ 1264.8333740234375, 103.100006103515625, 122.0, 22.0 ],
 					"text" : "print npm @popup 1"
 				}
 
@@ -1395,8 +1493,6 @@
 					"saved_object_attributes" : 					{
 						"autostart" : 0,
 						"defer" : 0,
-						"node_bin_path" : "",
-						"npm_bin_path" : "",
 						"watch" : 0
 					}
 ,
@@ -1430,6 +1526,13 @@
 				"patchline" : 				{
 					"destination" : [ "obj-90", 0 ],
 					"source" : [ "obj-100", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-14", 0 ],
+					"source" : [ "obj-11", 0 ]
 				}
 
 			}
@@ -1654,6 +1757,13 @@
 				"patchline" : 				{
 					"destination" : [ "obj-100", 0 ],
 					"source" : [ "obj-57", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-15", 0 ],
+					"source" : [ "obj-7", 0 ]
 				}
 
 			}
