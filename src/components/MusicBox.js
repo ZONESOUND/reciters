@@ -9,6 +9,7 @@ let soundPlayer = [];
 const importSoundFiles = () => {
     let context = require.context(`../sounds/`, true, /\.(mp3)$/);
     context.keys().forEach((filename)=>{
+        console.log(filename);
         soundFiles.push(context(filename));
     });
     //console.log(soundFiles);
@@ -73,7 +74,7 @@ function MusicBoxMin(props) {
     let processSound = (data) => {
         if (props.stop) return;
 
-        console.log(data);
+        //console.log(data);
         if (data.stop && data.stop !== '*') {
             stopAll();
             return;

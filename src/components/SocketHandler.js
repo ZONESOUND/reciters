@@ -102,7 +102,7 @@ function SocketHandler(props) {
         {/* <button onClick={t}></button> */}
         {/* <EffectBox controlData={controlData}/> */}
         {/* <MusicBoxMin stop={speak}/> */}
-        <EffectBox show={socketConnect} stop={speak} />
+        <EffectBox show={socketConnect && !speak} stop={speak} />
         <Fade show={socketConnect}>
             <Speak toSpeak={speak} data={speakData} speakOver={speakOver} 
                     changeVoice={changeVoice} changeVoiceCallback={changeVoiceCallback}
