@@ -2,37 +2,44 @@ import React, {useState, useEffect} from 'react';
 import { useInterval, usePrevious } from '../usages/tool';
 import InfoPage from './InfoPage';
 import Fade from './Fade';
-import styled from 'styled-components'
+import {FullDiv} from '../usages/cssUsage';
+import {excludeName} from '../usages/voiceUsage';
 
-const FullDiv = styled.div`
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  z-index: -10;
-  background: ${props => 
-    props.bgColor === undefined ? "white" : props.bgColor};  
-`
 
 function Speak(props) {
-  const synth = window.speechSynthesis;  
+  let genVoice = () => {
+    let v = synth.getVoices();
+    let prevName = '';
+    for (var i=0; i<v.length; i++) {
+      while ((excludeName.has(v[i].name) || v[i].name === prevName) && i<v.length) v.splice(i, 1);
+      prevName = v[i].name;
+      if (v[i].default) changeVoiceIdx(i);
+    }
+    return v;
+  }
 
-  const [voices, getVoices] = useState(synth.getVoices());
+  const synth = window.speechSynthesis;  
   const [voiceIndex, changeVoiceIdx] = useState(0);
+  const [voices, setVoices] = useState(()=>{return genVoice();});
   const [pitch, setPitch] = useState(1);
   const [rate, setRate] = useState(1);
   const [speaking, setSpeaking] = useState(false);
 
   //const [sentence, setSentence] = useState('');
-  const {toSpeak, sentence, changeVoice} = props;
+  const {toSpeak, data, changeVoice} = props;
   const prevSpeak = usePrevious(toSpeak);
   const prevChangeVoice = usePrevious(changeVoice);
   const [revealSentence, setRevealSentence] = useState('');
+
   useEffect(()=>{
     if (!toSpeak || speaking) return;
-    if (prevSpeak !== toSpeak && sentence !== undefined) {
-      speakTxt(sentence);
+    if (prevSpeak !== toSpeak && data.text) {
+      if (data.rate) setRate(data.rate);
+      if (data.pitch) setPitch(data.pitch);
+      //speakTxt(data.text);
+      speakTxtWithPR(data.text, data.pitch?data.pitch:pitch, data.rate?data.rate:rate);
     }
-  }, [toSpeak, sentence]);
+  }, [toSpeak, data]);
 
   useEffect(()=>{
     if (prevChangeVoice !== changeVoice) {
@@ -40,16 +47,12 @@ function Speak(props) {
     }
   }, [changeVoice]);
 
+  useEffect(()=>{
+    props.changeVoiceCallback({name:voices[voiceIndex].name, lang:voices[voiceIndex].lang});
+  }, [voiceIndex]);
 
   let populateVoice = () => {
-    let v = synth.getVoices();
-    for (var i=0; i<v.length; i++) {
-      if (v[i].default) {
-        changeVoiceIdx(i);
-        break;
-      }
-    }
-    getVoices(v);
+    setVoices(genVoice());
   }
   synth.onvoiceschanged = populateVoice;
   useInterval(() => {
@@ -57,8 +60,9 @@ function Speak(props) {
         //console.log('finish speak!');
         props.speakOver();
         setSpeaking(false);
+        setRevealSentence("");
     }
-  }, speaking ? 200 : null);
+  }, speaking ? 100 : null);
 
   let submitSpeak = (event) => {
     event.preventDefault();
@@ -73,11 +77,17 @@ function Speak(props) {
     utterThis.pitch = pitch;
     utterThis.rate = rate;
     synth.speak(utterThis);
-
   }
 
-
-  
+  let speakTxtWithPR = (txt, p, r) => {
+    setSpeaking(true);
+    setRevealSentence(txt);
+    let utterThis = new SpeechSynthesisUtterance(txt);
+    utterThis.voice = voices[voiceIndex];
+    utterThis.pitch = p;
+    utterThis.rate = r;
+    synth.speak(utterThis);
+  }
 
   const formProps = {
     onSubmitF: submitSpeak,
@@ -97,7 +107,7 @@ function Speak(props) {
     <>
       {props.form && <SpeakForm {...formProps}/>}
       <InfoPage personName={personName} 
-        sentence={revealSentence} nameColor={speaking ? 'black': 'white'}/>
+        sentence={revealSentence} speakingVoice={props.nowSpeak} nameColor={speaking ? 'black': 'white'} /> 
       <Fade show={speaking} speed={'0.3s'}>
         <FullDiv/>
       </Fade>
@@ -109,7 +119,6 @@ function SpeakForm(props) {
   const {onSubmitF, voiceIndex, 
         voiceOnChanged, voices, pitch, rate, 
         pitchOnChanged, rateOnChanged} = props;
-  console.log('speak form', voiceIndex);
   return (
     <form onSubmit={onSubmitF}>
       <select value={voiceIndex} onChange={(e) => {voiceOnChanged(e.target.value)}}>

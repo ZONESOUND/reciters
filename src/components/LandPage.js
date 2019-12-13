@@ -1,8 +1,6 @@
-import React, {useState, useEffect} from 'react';
-import {useInterval} from '../usages/tool';
+import React from 'react';
 import '../css/LandPage.css';
 //import ReactHtmlParser from 'react-html-parser'; 
-
 
 function LandPage(props) {
     return (

@@ -15,6 +15,8 @@ const localhostIP = 'http://localhost:8000';
 var socket;
 var namespace = '/controller';
 
+var nextEnable = true;
+
 Max.post('script start');
 connectServer();
 
@@ -50,9 +52,13 @@ function addSocketListener() {
 			Max.post(message)
 		});
 
+		socket.on('speakConfig', (message) => {
+			Max.outlet(message.mode, message.data);
+		});
+
 		socket.on('speakOver', (message) => {
 			//Max.bang();
-			Max.outlet(true);
+			Max.outlet('speakover', true);
 		});
 
 		socket.on('osc', (message) => {
@@ -60,30 +66,53 @@ function addSocketListener() {
 			Max.outlet(message)
 		});
 
+		socket.on('showClient', (data) => {
+			Max.post(data);
+		})
+
 		//sender: 
 	    const sender = function (data) {
+			if (!nextEnable) return;
+			next();
 			Max.post(data);
 			socket.emit(data.name, data.value);
+			
 		};
 
 		Max.addHandler('speak', (message) => {
-			Max.post(message);
+			//Max.post(message);
 			//socket.emit('', message);
 			sender({name:'speak', value:message});
 		});
 
 		Max.addHandler('speakAdvance', (dict) => {
-			Max.post(dict);
+			//Max.post(dict);
 			//socket.emit('', message);
 			sender({name:'speakAdvance', value:dict});
 		});
 
 		Max.addHandler('speakConfig', (message) => {
-			Max.post(message);
+			//Max.post(message);
 			//socket.emit('', message);
 			sender({name:'speakConfig', value:message});
 		});
 
+		Max.addHandler('show', (order) => {
+			socket.emit('showClient', order);
+		});
+
+		Max.addHandler('showArr', (...order) => {
+			socket.emit('showClient', order);
+		});
+
+		Max.addHandler("controlData", (...args) => {
+			sender({name:'controlData', value:args[0]});
+		});
 	})
+}
+
+function next() {
+	nextEnable = false;
+	setTimeout(()=>{nextEnable = true;}, 100);
 }
 
