@@ -21,6 +21,7 @@ function dailyTrend(err, results) {
 			console.log('Failed to parse: ', results);
 			return;
 		}
+
 		var data = JSON.parse(results)['default']['trendingSearchesDays'][0]['trendingSearches'];
 		Max.post(`Got ${data.length} daily trends`);
 		Max.outlet('daily', data);
