@@ -195,7 +195,6 @@
 						"tags" : "",
 						"style" : "",
 						"subpatcher_template" : "",
-						"visible" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
 									"id" : "obj-25",
@@ -1366,7 +1365,7 @@
 					"outlettype" : [ "int", "", "" ],
 					"parameter_enable" : 0,
 					"patching_rect" : [ 583.5, 7.899993896484375, 81.5, 69.0 ],
-					"tabs" : [ "changeVoice", "showForm", "hideForm", "showUser" ]
+					"tabs" : [ "changeVoice", "showForm", "hideForm", "showUser", "clearAll" ]
 				}
 
 			}

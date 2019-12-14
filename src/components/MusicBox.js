@@ -3,7 +3,7 @@ import {onSocket} from '../usages/socketUsage';
 import Tone from 'tone';
 import AnimeBox from './AnimeBox';
 
-let soundStateNum = [15, 36, 48, 58];
+let soundStateNum = [15, 36, 48, 58, 68];
 let soundFiles = [];
 let soundPlayer = [];
 const importSoundFiles = () => {
