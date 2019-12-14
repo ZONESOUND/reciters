@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "f1fa55762e68f30ee0693e56a6bc339e",
+    "revision": "78bf7b316f7885e99168dbddca224484",
     "url": "/speaking/index.html"
   },
   {
-    "revision": "1551028624d554557832",
+    "revision": "a99f89dcffd8008480ee",
     "url": "/speaking/static/css/main.4266813a.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/speaking/static/js/2.61ebd042.chunk.js"
   },
   {
-    "revision": "1551028624d554557832",
-    "url": "/speaking/static/js/main.bc58edd5.chunk.js"
+    "revision": "a99f89dcffd8008480ee",
+    "url": "/speaking/static/js/main.3735ee4e.chunk.js"
   },
   {
     "revision": "388c33f13b200a681ed8",
@@ -250,5 +250,45 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "b75fdf327635a91831d107f0abe5eec0",
     "url": "/speaking/static/media/s4_9.b75fdf32.mp3"
+  },
+  {
+    "revision": "130285534257c69f82e166272c7030e5",
+    "url": "/speaking/static/media/sample_1-1.13028553.mp3"
+  },
+  {
+    "revision": "7650b135771a8af356b56213ae64085d",
+    "url": "/speaking/static/media/sample_1-2.7650b135.mp3"
+  },
+  {
+    "revision": "8790d90967533317439d8fa2ba85c176",
+    "url": "/speaking/static/media/sample_1-3.8790d909.mp3"
+  },
+  {
+    "revision": "f9bb29ba8ee5a9382988adcc6428f31d",
+    "url": "/speaking/static/media/sample_1-4.f9bb29ba.mp3"
+  },
+  {
+    "revision": "342b425bdd451468f40cb525d0b49974",
+    "url": "/speaking/static/media/sample_1-5.342b425b.mp3"
+  },
+  {
+    "revision": "a54a14525f1649cc73b030ab2a2d7e81",
+    "url": "/speaking/static/media/sample_2-1.a54a1452.mp3"
+  },
+  {
+    "revision": "91e0a60f765d7b92d6f414aa666d4fc7",
+    "url": "/speaking/static/media/sample_2-2.91e0a60f.mp3"
+  },
+  {
+    "revision": "cbac890465f428a85a60247df11696d8",
+    "url": "/speaking/static/media/sample_2-3.cbac8904.mp3"
+  },
+  {
+    "revision": "563c08ed58d4a885b73d61b5ecae78fe",
+    "url": "/speaking/static/media/sample_2-4.563c08ed.mp3"
+  },
+  {
+    "revision": "6922cc241453e2ea86893f41a68a4706",
+    "url": "/speaking/static/media/sample_2-5.6922cc24.mp3"
   }
 ]);

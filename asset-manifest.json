@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/speaking/static/css/main.4266813a.chunk.css",
-    "main.js": "/speaking/static/js/main.bc58edd5.chunk.js",
-    "main.js.map": "/speaking/static/js/main.bc58edd5.chunk.js.map",
+    "main.js": "/speaking/static/js/main.3735ee4e.chunk.js",
+    "main.js.map": "/speaking/static/js/main.3735ee4e.chunk.js.map",
     "runtime-main.js": "/speaking/static/js/runtime-main.477aa4a2.js",
     "runtime-main.js.map": "/speaking/static/js/runtime-main.477aa4a2.js.map",
     "static/js/2.61ebd042.chunk.js": "/speaking/static/js/2.61ebd042.chunk.js",
     "static/js/2.61ebd042.chunk.js.map": "/speaking/static/js/2.61ebd042.chunk.js.map",
     "index.html": "/speaking/index.html",
-    "precache-manifest.b0c53b8f946b8ff03837d2045e950f75.js": "/speaking/precache-manifest.b0c53b8f946b8ff03837d2045e950f75.js",
+    "precache-manifest.eb6375c88a3160fb7397ac5e5e7b95ff.js": "/speaking/precache-manifest.eb6375c88a3160fb7397ac5e5e7b95ff.js",
     "service-worker.js": "/speaking/service-worker.js",
     "static/css/main.4266813a.chunk.css.map": "/speaking/static/css/main.4266813a.chunk.css.map",
     "static/media/s1_1.mp3": "/speaking/static/media/s1_1.ea669680.mp3",
@@ -68,12 +68,22 @@
     "static/media/s4_6.mp3": "/speaking/static/media/s4_6.ab563acd.mp3",
     "static/media/s4_7.mp3": "/speaking/static/media/s4_7.62744ba7.mp3",
     "static/media/s4_8.mp3": "/speaking/static/media/s4_8.bcb0d03f.mp3",
-    "static/media/s4_9.mp3": "/speaking/static/media/s4_9.b75fdf32.mp3"
+    "static/media/s4_9.mp3": "/speaking/static/media/s4_9.b75fdf32.mp3",
+    "static/media/sample_1-1.mp3": "/speaking/static/media/sample_1-1.13028553.mp3",
+    "static/media/sample_1-2.mp3": "/speaking/static/media/sample_1-2.7650b135.mp3",
+    "static/media/sample_1-3.mp3": "/speaking/static/media/sample_1-3.8790d909.mp3",
+    "static/media/sample_1-4.mp3": "/speaking/static/media/sample_1-4.f9bb29ba.mp3",
+    "static/media/sample_1-5.mp3": "/speaking/static/media/sample_1-5.342b425b.mp3",
+    "static/media/sample_2-1.mp3": "/speaking/static/media/sample_2-1.a54a1452.mp3",
+    "static/media/sample_2-2.mp3": "/speaking/static/media/sample_2-2.91e0a60f.mp3",
+    "static/media/sample_2-3.mp3": "/speaking/static/media/sample_2-3.cbac8904.mp3",
+    "static/media/sample_2-4.mp3": "/speaking/static/media/sample_2-4.563c08ed.mp3",
+    "static/media/sample_2-5.mp3": "/speaking/static/media/sample_2-5.6922cc24.mp3"
   },
   "entrypoints": [
     "static/js/runtime-main.477aa4a2.js",
     "static/js/2.61ebd042.chunk.js",
     "static/css/main.4266813a.chunk.css",
-    "static/js/main.bc58edd5.chunk.js"
+    "static/js/main.3735ee4e.chunk.js"
   ]
 }
