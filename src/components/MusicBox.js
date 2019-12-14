@@ -3,29 +3,36 @@ import {onSocket} from '../usages/socketUsage';
 import Tone from 'tone';
 import AnimeBox from './AnimeBox';
 
-let soundStateNum = [15, 36, 48, 58, 68];
+let soundStateNum = [];
 let soundFiles = [];
 let soundPlayer = [];
 const importSoundFiles = () => {
     let context = require.context(`../sounds/`, true, /\.(mp3)$/);
+    let count = 0;
+    let prev = '';
     context.keys().forEach((filename)=>{
-        console.log(filename);
+        console.log(context(filename), count);
+        if (filename.slice(0,4) !== prev) {
+            prev = filename.slice(0,4);
+            soundStateNum.push(count);
+        }
+        count ++;
         soundFiles.push(context(filename));
     });
-    //console.log(soundFiles);
+    soundStateNum.push(count);
+    console.log(soundStateNum);
 }
 const soundPreload = () => {
-	console.log('soundPreload');
+	console.log('soundPreload', soundStateNum[soundStateNum.length-2]);
 	//var meter = new Tone.Meter('level');
 	//var fft = new Tone.Analyser('fft', 64);
 	//var waveform = new Tone.Analyser('waveform', 32);
 	//var soundPlayer = [];
-
-    soundFiles.forEach((value)=> {
+    soundFiles.forEach((value, ind)=> {
         var temp = new Tone.Player({
 			"url": value,
-			"fadeOut": 5,
-            "fadeIn": 5
+			"fadeOut": ind < soundStateNum[soundStateNum.length-2] ? 5 : 0,
+            "fadeIn": ind < soundStateNum[soundStateNum.length-2] ? 5 : 0
         }).toMaster();
 			//}).connect(meter).connect(waveform).connect(fft).toMaster();
 		soundPlayer.push(temp);
@@ -80,7 +87,7 @@ function MusicBoxMin(props) {
             return;
         }
         let order = -1;
-        if (data.set) {
+        if (data.set && data.set < soundStateNum.length) {
             order = Math.floor(Math.random() * (soundStateNum[data.set] - soundStateNum[data.set-1]));
             order += soundStateNum[data.set-1];
         } else if ('order' in data) {
@@ -129,7 +136,7 @@ function MusicBoxMin(props) {
         //console.log(order);
 		if (soundPlayer[order] !== undefined) {
 			if (soundPlayer[order].loaded) {
-				console.log(order, 'played!');
+                console.log(order, 'played!');
                 soundPlayer[order].start();
                 setNowOrder(order);
 			} else {

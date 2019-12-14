@@ -96,8 +96,8 @@ class EffectBox extends Component {
 
     handleSocketData(data) {
     	//console.log(rgbColors);
-    	var sound = "sound" in data ? data.sound : {};
-        var light = "light" in data ? this.handleLightData(data.light) : {};
+    	var sound = 'sound' in data && data.sound !== '*' ? data.sound : {};
+        var light = 'light' in data && data.light !== '*'? this.handleLightData(data.light) : {};
     	 
     	//console.log(`<sound in handleSocketData> ${JSON.stringify(sound)}`);
     	//console.log(`<light> ${JSON.stringify(light)}`);
