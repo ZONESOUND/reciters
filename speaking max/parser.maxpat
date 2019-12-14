@@ -39,13 +39,37 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
-					"id" : "obj-164",
-					"linecount" : 3,
+					"id" : "obj-166",
+					"linecount" : 2,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 201.5, 548.0, 150.0, 47.0 ],
-					"text" : "BUG appears when there is only 1 item in array QQQQQ"
+					"patching_rect" : [ 56.25, 617.9000244140625, 91.5, 33.0 ],
+					"presentation_linecount" : 3,
+					"text" : "mth content in nth query"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-165",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 83.5, 541.0, 62.0, 20.0 ],
+					"text" : "nth query"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-164",
+					"linecount" : 5,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 285.0, 560.0, 150.0, 74.0 ],
+					"text" : "*****\nBUG appears when there is only 1 item in array QQQQQ\n*****"
 				}
 
 			}
