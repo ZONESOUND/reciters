@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/recitation/static/css/main.4266813a.chunk.css",
-    "main.js": "/recitation/static/js/main.46d05bfd.chunk.js",
-    "main.js.map": "/recitation/static/js/main.46d05bfd.chunk.js.map",
+    "main.js": "/recitation/static/js/main.c7d6c038.chunk.js",
+    "main.js.map": "/recitation/static/js/main.c7d6c038.chunk.js.map",
     "runtime-main.js": "/recitation/static/js/runtime-main.3ff3e013.js",
     "runtime-main.js.map": "/recitation/static/js/runtime-main.3ff3e013.js.map",
     "static/js/2.0bf7468e.chunk.js": "/recitation/static/js/2.0bf7468e.chunk.js",
     "static/js/2.0bf7468e.chunk.js.map": "/recitation/static/js/2.0bf7468e.chunk.js.map",
     "index.html": "/recitation/index.html",
-    "precache-manifest.1da320eaede8f51bf5b6bf5f1d618849.js": "/recitation/precache-manifest.1da320eaede8f51bf5b6bf5f1d618849.js",
+    "precache-manifest.887782207608b7b029b048638b719326.js": "/recitation/precache-manifest.887782207608b7b029b048638b719326.js",
     "service-worker.js": "/recitation/service-worker.js",
     "static/css/main.4266813a.chunk.css.map": "/recitation/static/css/main.4266813a.chunk.css.map",
     "static/media/s1_1.mp3": "/recitation/static/media/s1_1.ea669680.mp3",
@@ -84,6 +84,6 @@
     "static/js/runtime-main.3ff3e013.js",
     "static/js/2.0bf7468e.chunk.js",
     "static/css/main.4266813a.chunk.css",
-    "static/js/main.46d05bfd.chunk.js"
+    "static/js/main.c7d6c038.chunk.js"
   ]
 }
