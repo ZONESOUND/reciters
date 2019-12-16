@@ -31,8 +31,8 @@ const soundPreload = () => {
     soundFiles.forEach((value, ind)=> {
         var temp = new Tone.Player({
 			"url": value,
-			"fadeOut": ind < soundStateNum[soundStateNum.length-2] ? 5 : 0,
-            "fadeIn": ind < soundStateNum[soundStateNum.length-2] ? 5 : 0
+			"fadeOut": ind < soundStateNum[4] ? 5 : 0,
+            "fadeIn": ind < soundStateNum[4] ? 5 : 0
         }).toMaster();
 			//}).connect(meter).connect(waveform).connect(fft).toMaster();
 		soundPlayer.push(temp);
