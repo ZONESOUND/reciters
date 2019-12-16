@@ -11,7 +11,7 @@ const importSoundFiles = () => {
     let count = 0;
     let prev = '';
     context.keys().forEach((filename)=>{
-        console.log(context(filename), count);
+        //console.log(context(filename), count);
         if (filename.slice(0,4) !== prev) {
             prev = filename.slice(0,4);
             soundStateNum.push(count);

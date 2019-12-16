@@ -10,10 +10,13 @@ function Speak(props) {
   let genVoice = () => {
     let v = synth.getVoices();
     let prevName = '';
+    console.log(v.length);
     for (var i=0; i<v.length; i++) {
-      while ((excludeName.has(v[i].name) || v[i].name === prevName) && i<v.length) v.splice(i, 1);
-      prevName = v[i].name;
-      if (v[i].default) changeVoiceIdx(i);
+      while (i<v.length && (excludeName.has(v[i].name) || v[i].name === prevName)) v.splice(i, 1);
+      if (i < v.length) {
+        prevName = v[i].name;
+        if (v[i].default) changeVoiceIdx(i);
+      }
     }
     return v;
   }
