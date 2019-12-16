@@ -54,7 +54,7 @@
 						}
 ,
 						"classnamespace" : "box",
-						"rect" : [ 34.0, 79.0, 1212.0, 687.0 ],
+						"rect" : [ 34.0, 232.0, 1212.0, 687.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -81,8 +81,43 @@
 						"tags" : "",
 						"style" : "",
 						"subpatcher_template" : "",
-						"visible" : 1,
 						"boxes" : [ 							{
+								"box" : 								{
+									"id" : "obj-27",
+									"maxclass" : "button",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "bang" ],
+									"parameter_enable" : 0,
+									"patching_rect" : [ 619.5, 107.25, 24.0, 24.0 ]
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-15",
+									"maxclass" : "message",
+									"numinlets" : 2,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 447.0, 501.0, 97.0, 22.0 ],
+									"text" : "\"are you ready?\""
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-10",
+									"maxclass" : "newobj",
+									"numinlets" : 4,
+									"numoutlets" : 1,
+									"outlettype" : [ "dictionary" ],
+									"patching_rect" : [ 447.0, 561.0, 245.0, 22.0 ],
+									"text" : "dict.pack text: percentage:0.8 rate:1. pitch:1."
+								}
+
+							}
+, 							{
 								"box" : 								{
 									"id" : "obj-6",
 									"maxclass" : "number",
@@ -129,7 +164,7 @@
 									"numinlets" : 4,
 									"numoutlets" : 1,
 									"outlettype" : [ "dictionary" ],
-									"patching_rect" : [ 707.0, 481.0, 241.0, 22.0 ],
+									"patching_rect" : [ 707.0, 561.0, 241.0, 22.0 ],
 									"text" : "dict.pack text: percentage:0 rate:0.8 pitch:1."
 								}
 
@@ -166,7 +201,7 @@
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 707.0, 553.0, 31.0, 22.0 ],
+									"patching_rect" : [ 707.0, 633.0, 31.0, 22.0 ],
 									"text" : "s s1"
 								}
 
@@ -178,7 +213,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 707.0, 516.0, 135.0, 22.0 ],
+									"patching_rect" : [ 707.0, 596.0, 135.0, 22.0 ],
 									"text" : "prepend speakAdvance"
 								}
 
@@ -202,7 +237,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 707.0, 444.0, 57.0, 22.0 ],
+									"patching_rect" : [ 707.0, 454.0, 57.0, 22.0 ],
 									"text" : "tosymbol"
 								}
 
@@ -296,7 +331,7 @@
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 723.0, 145.0, 87.0, 22.0 ],
+									"patching_rect" : [ 619.5, 154.0, 87.0, 22.0 ],
 									"text" : "s changeVoice"
 								}
 
@@ -397,6 +432,13 @@
 							}
 , 							{
 								"patchline" : 								{
+									"destination" : [ "obj-9", 0 ],
+									"source" : [ "obj-10", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
 									"destination" : [ "obj-25", 1 ],
 									"source" : [ "obj-11", 0 ]
 								}
@@ -406,6 +448,13 @@
 								"patchline" : 								{
 									"destination" : [ "obj-16", 0 ],
 									"source" : [ "obj-12", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-10", 0 ],
+									"source" : [ "obj-15", 0 ]
 								}
 
 							}
@@ -488,6 +537,13 @@
 							}
 , 							{
 								"patchline" : 								{
+									"destination" : [ "obj-47", 0 ],
+									"source" : [ "obj-27", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
 									"destination" : [ "obj-11", 0 ],
 									"order" : 2,
 									"source" : [ "obj-28", 0 ]
@@ -528,15 +584,6 @@
 , 							{
 								"patchline" : 								{
 									"destination" : [ "obj-42", 0 ],
-									"order" : 0,
-									"source" : [ "obj-35", 0 ]
-								}
-
-							}
-, 							{
-								"patchline" : 								{
-									"destination" : [ "obj-47", 0 ],
-									"order" : 1,
 									"source" : [ "obj-35", 0 ]
 								}
 
@@ -847,7 +894,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 749.0, 179.0, 50.0, 22.0 ],
-									"text" : "6"
+									"text" : "4"
 								}
 
 							}
@@ -923,7 +970,6 @@
 									"outlettype" : [ "", "int", "", "" ],
 									"parameter_enable" : 0,
 									"patching_rect" : [ 624.0, 299.75, 228.0, 84.5 ],
-									"presentation_linecount" : 11,
 									"text" : "\"Before the Internet came into existence, to communicate with someone who isn’t in the same room as you, you would have to call them on a phone. Or if you wanted to send them a note you had to send a letter through snail mail. With the introduction of the Internet, we now have the ability to send and receive messages through electronic mail- virtually instantaneously and without the need of a postage stamp.\""
 								}
 
@@ -938,7 +984,6 @@
 									"outlettype" : [ "", "int", "", "" ],
 									"parameter_enable" : 0,
 									"patching_rect" : [ 860.0, 503.75, 228.0, 84.5 ],
-									"presentation_linecount" : 9,
 									"text" : "\"The easier access to information opens the door for more misinformation. For all the ease of banking, shopping, and communication there are threat actors looking to steal resources and personal information for profit. For every like-minded person you meet, you meet all manners of Internet trolls and other undesirable people.\""
 								}
 
@@ -953,7 +998,6 @@
 									"outlettype" : [ "", "int", "", "" ],
 									"parameter_enable" : 0,
 									"patching_rect" : [ 624.0, 503.75, 228.0, 84.5 ],
-									"presentation_linecount" : 18,
 									"text" : "\"the Internet has changed things for entrepreneurs precipitously. Data storage and retrieval is faster. Cloud platforms of all types offer software, hardware, security, and development platforms that reduce the enormous capital costs many organizations were spending on their IT. It gives organizations access to a glut of resources, no more important than a growing mobile workforce that is available around the clock, promoting better productivity. It provides the opportunity to streamline all types of work, whether it be reducing face-to-face interactions with your vendors, or utilizing tracking software that helps administrators build more efficient business practices.\""
 								}
 
@@ -968,7 +1012,6 @@
 									"outlettype" : [ "", "int", "", "" ],
 									"parameter_enable" : 0,
 									"patching_rect" : [ 1096.0, 299.75, 228.0, 84.5 ],
-									"presentation_linecount" : 11,
 									"text" : "\"Social media has had an amazing amount of influence, but for all the good that it does, it also creates what is known as a “toxic mirror” effect. This is the concept of making people feel bad about themselves by constantly being exposed to information that would make them create negative opinions about themselves. The toxic mirror makes anything that isn’t physical, emotional, and mental perfection, ugly and bad.\""
 								}
 
@@ -983,7 +1026,6 @@
 									"outlettype" : [ "", "int", "", "" ],
 									"parameter_enable" : 0,
 									"patching_rect" : [ 1096.0, 398.75, 228.0, 84.5 ],
-									"presentation_linecount" : 11,
 									"text" : "\"This break from reality further muddies people’s ability to properly identify risk.The Internet is filled with trolls, stalkers, and bullies. These groups are allowed to run rampant, as people don’t have a lot of resources to ward against them. These individuals hide behind their Internet persona, making civil action against them extremely difficult. Cyberbullying, specifically, can cause great harm to people of all ages.\""
 								}
 
@@ -998,7 +1040,6 @@
 									"outlettype" : [ "", "int", "", "" ],
 									"parameter_enable" : 0,
 									"patching_rect" : [ 860.0, 299.75, 228.0, 84.5 ],
-									"presentation_linecount" : 11,
 									"text" : "\"The Internet has provided a social outlet to people who didn’t have one. The use of social media has revolutionized the way people share and communicate. Each person has the freedom to do whatever they choose online, and often this results in positive action. Many important groups that have been marginalized for one reason or another are now able to promote their platforms thoroughly.\""
 								}
 
@@ -1013,7 +1054,6 @@
 									"outlettype" : [ "", "int", "", "" ],
 									"parameter_enable" : 0,
 									"patching_rect" : [ 1096.0, 503.75, 228.0, 84.5 ],
-									"presentation_linecount" : 16,
 									"text" : "\"the Internet is a true double-edged sword. On one hand, if you don’t utilize its features, you could be hindering the manner in which you conduct business, since more people are exposed to your business on the Internet than in any other place. A problem with this is that you then have to spend a lot of advertising capital to try and get your business exposed to potential customers. For some businesses this may be advantageous, but for the lion’s share of businesses, it increases the capital that is required without any assurance that it will provide additional sales.\""
 								}
 
@@ -1028,7 +1068,6 @@
 									"outlettype" : [ "", "int", "", "" ],
 									"parameter_enable" : 0,
 									"patching_rect" : [ 860.0, 404.75, 228.0, 84.5 ],
-									"presentation_linecount" : 12,
 									"text" : "\"Unfortunately, The ability to send and receive emails also created a means for cybercriminals to distribute spam and malware. Malware hiding in email attachments could wreak havoc to your PC or possibly even create a backdoor for an attacker to infiltrate your system. Through emails, cybercriminals saw this as another opportunity to play on human emotions and lure victims into revealing sensitive information through phishing scams.\""
 								}
 
@@ -3549,12 +3588,12 @@
 					"patching_rect" : [ 587.666666666666629, 209.0, 40.0, 40.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
-							"parameter_mmax" : 2.0,
-							"parameter_initial" : [ 1.0 ],
-							"parameter_shortname" : "dial[1]",
 							"parameter_type" : 0,
 							"parameter_longname" : "dial[1]",
-							"parameter_initial_enable" : 1
+							"parameter_initial_enable" : 1,
+							"parameter_mmax" : 2.0,
+							"parameter_initial" : [ 1.0 ],
+							"parameter_shortname" : "dial[1]"
 						}
 
 					}
@@ -3576,12 +3615,12 @@
 					"patching_rect" : [ 655.0, 209.0, 40.0, 40.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
-							"parameter_mmax" : 2.0,
-							"parameter_initial" : [ 1.0 ],
-							"parameter_shortname" : "dial",
 							"parameter_type" : 0,
 							"parameter_longname" : "dial",
-							"parameter_initial_enable" : 1
+							"parameter_initial_enable" : 1,
+							"parameter_mmax" : 2.0,
+							"parameter_initial" : [ 1.0 ],
+							"parameter_shortname" : "dial"
 						}
 
 					}
@@ -3639,12 +3678,24 @@
 						"visible" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
+									"id" : "obj-45",
+									"maxclass" : "button",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "bang" ],
+									"parameter_enable" : 0,
+									"patching_rect" : [ 132.0, 378.0, 24.0, 24.0 ]
+								}
+
+							}
+, 							{
+								"box" : 								{
 									"id" : "obj-13",
 									"maxclass" : "newobj",
 									"numinlets" : 0,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 25.0, 427.413040161132812, 68.0, 22.0 ],
+									"patching_rect" : [ 13.0, 246.913040161132812, 68.0, 22.0 ],
 									"text" : "r s3_sound"
 								}
 
@@ -3706,7 +3757,7 @@
 									"numinlets" : 0,
 									"numoutlets" : 1,
 									"outlettype" : [ "bang" ],
-									"patching_rect" : [ 706.0, 93.0, 30.0, 30.0 ]
+									"patching_rect" : [ 985.0, 345.0, 30.0, 30.0 ]
 								}
 
 							}
@@ -3846,13 +3897,12 @@
 , 							{
 								"box" : 								{
 									"id" : "obj-25",
-									"linecount" : 4,
 									"maxclass" : "newobj",
-									"numinlets" : 3,
+									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "dictionary" ],
-									"patching_rect" : [ 591.16668701171875, 277.413040161132812, 85.0, 62.0 ],
-									"text" : "dict.pack mode:light alpha:0 duration:30"
+									"patching_rect" : [ 870.16668701171875, 529.413040161132812, 162.0, 22.0 ],
+									"text" : "dict.pack mode:none alpha:0"
 								}
 
 							}
@@ -3974,11 +4024,11 @@
 									"id" : "obj-40",
 									"linecount" : 2,
 									"maxclass" : "newobj",
-									"numinlets" : 7,
+									"numinlets" : 8,
 									"numoutlets" : 1,
 									"outlettype" : [ "dictionary" ],
-									"patching_rect" : [ 786.0, 246.913040161132812, 417.0, 38.0 ],
-									"text" : "dict.pack mode:blink alpha:1 duration:1000 delay:0 endDelay:0 loopTime:1 color: @triggers -1"
+									"patching_rect" : [ 786.0, 246.913040161132812, 433.0, 38.0 ],
+									"text" : "dict.pack mode:blink alpha:1 duration:1000 delay:0 endDelay:0 random:0 loopTime:1 color: @triggers -1"
 								}
 
 							}
@@ -4013,7 +4063,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 307.166656494140625, 60.0, 179.66668701171875, 35.0 ],
+									"patching_rect" : [ 234.16668701171875, 187.0, 179.66668701171875, 35.0 ],
 									"text" : "這邊切換sound library\nwhen set equals 0, use order"
 								}
 
@@ -4026,7 +4076,7 @@
 									"numinlets" : 3,
 									"numoutlets" : 1,
 									"outlettype" : [ "dictionary" ],
-									"patching_rect" : [ 498.5, 277.413040161132812, 83.0, 62.0 ],
+									"patching_rect" : [ 777.5, 529.413040161132812, 83.0, 62.0 ],
 									"text" : "dict.pack type:normal interval:0 percentage:1"
 								}
 
@@ -4038,7 +4088,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 660.5, 163.0, 95.0, 33.0 ],
+									"patching_rect" : [ 1006.0, 441.0, 95.0, 33.0 ],
 									"text" : "stop all sound / screen to black"
 								}
 
@@ -4051,7 +4101,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "bang" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 660.5, 198.0, 24.0, 24.0 ]
+									"patching_rect" : [ 985.0, 450.0, 24.0, 24.0 ]
 								}
 
 							}
@@ -4063,7 +4113,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "dictionary" ],
-									"patching_rect" : [ 428.16668701171875, 277.413040161132812, 64.0, 35.0 ],
+									"patching_rect" : [ 707.16668701171875, 529.413040161132812, 64.0, 35.0 ],
 									"text" : "dict.pack stop:stop"
 								}
 
@@ -4074,7 +4124,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 457.66668701171875, 102.5, 50.0, 20.0 ],
+									"patching_rect" : [ 398.66668701171875, 225.5, 50.0, 20.0 ],
 									"text" : "orderTo"
 								}
 
@@ -4087,7 +4137,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "bang" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 457.66668701171875, 121.5, 50.0, 22.0 ]
+									"patching_rect" : [ 398.66668701171875, 244.5, 50.0, 22.0 ]
 								}
 
 							}
@@ -4097,7 +4147,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 375.0, 102.5, 50.0, 20.0 ],
+									"patching_rect" : [ 316.0, 225.5, 50.0, 20.0 ],
 									"text" : "order"
 								}
 
@@ -4110,7 +4160,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "bang" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 375.0, 121.5, 50.0, 22.0 ]
+									"patching_rect" : [ 316.0, 244.5, 50.0, 22.0 ]
 								}
 
 							}
@@ -4120,7 +4170,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 622.16668701171875, 102.5, 50.0, 20.0 ],
+									"patching_rect" : [ 563.16668701171875, 225.5, 50.0, 20.0 ],
 									"text" : "delay"
 								}
 
@@ -4133,7 +4183,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "bang" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 622.16668701171875, 121.5, 50.0, 22.0 ]
+									"patching_rect" : [ 563.16668701171875, 244.5, 50.0, 22.0 ]
 								}
 
 							}
@@ -4143,7 +4193,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 539.66668701171875, 102.5, 50.0, 20.0 ],
+									"patching_rect" : [ 480.66668701171875, 225.5, 50.0, 20.0 ],
 									"text" : "volume"
 								}
 
@@ -4156,7 +4206,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "bang" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 539.66668701171875, 121.5, 50.0, 22.0 ]
+									"patching_rect" : [ 480.66668701171875, 244.5, 50.0, 22.0 ]
 								}
 
 							}
@@ -4179,7 +4229,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 293.16668701171875, 102.5, 64.0, 20.0 ],
+									"patching_rect" : [ 234.16668701171875, 225.5, 64.0, 20.0 ],
 									"text" : "set(1~6)"
 								}
 
@@ -4194,7 +4244,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "bang" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 293.16668701171875, 121.5, 50.0, 22.0 ]
+									"patching_rect" : [ 234.16668701171875, 244.5, 50.0, 22.0 ]
 								}
 
 							}
@@ -4205,7 +4255,7 @@
 									"numinlets" : 5,
 									"numoutlets" : 1,
 									"outlettype" : [ "dictionary" ],
-									"patching_rect" : [ 293.16668701171875, 162.152175903320312, 348.0, 22.0 ],
+									"patching_rect" : [ 234.16668701171875, 285.152175903320312, 348.0, 22.0 ],
 									"text" : "dict.pack set:0 order:0 orderTo:0 volume:0 delay:0 @triggers -1"
 								}
 
@@ -4304,13 +4354,13 @@
 									"patching_rect" : [ 58.659431457519531, 110.847824096679688, 69.681137084960938, 22.0 ],
 									"saved_attribute_attributes" : 									{
 										"valueof" : 										{
-											"parameter_mmax" : 1,
-											"parameter_initial" : [ 1.0 ],
-											"parameter_shortname" : "textbutton",
 											"parameter_enum" : [ "off", "on" ],
 											"parameter_type" : 2,
 											"parameter_longname" : "textbutton",
-											"parameter_initial_enable" : 1
+											"parameter_initial_enable" : 1,
+											"parameter_mmax" : 1,
+											"parameter_initial" : [ 1.0 ],
+											"parameter_shortname" : "textbutton"
 										}
 
 									}
@@ -4340,16 +4390,6 @@
 								"patchline" : 								{
 									"destination" : [ "obj-10", 0 ],
 									"midpoints" : [ 93.5, 366.0, 172.16668701171875, 366.0 ],
-									"order" : 1,
-									"source" : [ "obj-1", 0 ]
-								}
-
-							}
-, 							{
-								"patchline" : 								{
-									"destination" : [ "obj-40", 0 ],
-									"midpoints" : [ 93.5, 240.0, 795.5, 240.0 ],
-									"order" : 0,
 									"source" : [ "obj-1", 0 ]
 								}
 
@@ -4387,14 +4427,14 @@
 , 							{
 								"patchline" : 								{
 									"destination" : [ "obj-148", 0 ],
-									"order" : 1,
+									"order" : 2,
 									"source" : [ "obj-13", 0 ]
 								}
 
 							}
 , 							{
 								"patchline" : 								{
-									"destination" : [ "obj-9", 0 ],
+									"destination" : [ "obj-54", 0 ],
 									"order" : 0,
 									"source" : [ "obj-13", 0 ]
 								}
@@ -4402,8 +4442,16 @@
 							}
 , 							{
 								"patchline" : 								{
+									"destination" : [ "obj-9", 0 ],
+									"order" : 1,
+									"source" : [ "obj-13", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
 									"destination" : [ "obj-10", 1 ],
-									"midpoints" : [ 437.66668701171875, 390.0, 243.16668701171875, 390.0 ],
+									"midpoints" : [ 716.66668701171875, 567.0, 348.0, 567.0, 348.0, 414.0, 243.16668701171875, 414.0 ],
 									"source" : [ "obj-14", 0 ]
 								}
 
@@ -4425,7 +4473,7 @@
 , 							{
 								"patchline" : 								{
 									"destination" : [ "obj-14", 0 ],
-									"midpoints" : [ 670.0, 264.0, 437.66668701171875, 264.0 ],
+									"midpoints" : [ 994.5, 516.0, 716.66668701171875, 516.0 ],
 									"order" : 2,
 									"source" : [ "obj-16", 0 ]
 								}
@@ -4434,7 +4482,7 @@
 , 							{
 								"patchline" : 								{
 									"destination" : [ "obj-18", 0 ],
-									"midpoints" : [ 670.0, 264.0, 508.0, 264.0 ],
+									"midpoints" : [ 994.5, 516.0, 787.0, 516.0 ],
 									"order" : 1,
 									"source" : [ "obj-16", 0 ]
 								}
@@ -4443,7 +4491,7 @@
 , 							{
 								"patchline" : 								{
 									"destination" : [ "obj-25", 0 ],
-									"midpoints" : [ 670.0, 264.0, 600.66668701171875, 264.0 ],
+									"midpoints" : [ 994.5, 516.0, 879.66668701171875, 516.0 ],
 									"order" : 0,
 									"source" : [ "obj-16", 0 ]
 								}
@@ -4459,7 +4507,7 @@
 , 							{
 								"patchline" : 								{
 									"destination" : [ "obj-10", 0 ],
-									"midpoints" : [ 508.0, 341.0, 172.16668701171875, 341.0 ],
+									"midpoints" : [ 787.0, 594.0, 348.0, 594.0, 348.0, 414.0, 172.16668701171875, 414.0 ],
 									"source" : [ "obj-18", 0 ]
 								}
 
@@ -4481,7 +4529,7 @@
 , 							{
 								"patchline" : 								{
 									"destination" : [ "obj-10", 2 ],
-									"midpoints" : [ 600.66668701171875, 414.0, 314.16668701171875, 414.0 ],
+									"midpoints" : [ 879.66668701171875, 552.0, 867.0, 552.0, 867.0, 423.0, 314.16668701171875, 423.0 ],
 									"source" : [ "obj-25", 0 ]
 								}
 
@@ -4587,6 +4635,13 @@
 							}
 , 							{
 								"patchline" : 								{
+									"destination" : [ "obj-10", 0 ],
+									"source" : [ "obj-45", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
 									"destination" : [ "obj-54", 3 ],
 									"source" : [ "obj-50", 0 ]
 								}
@@ -4595,7 +4650,7 @@
 , 							{
 								"patchline" : 								{
 									"destination" : [ "obj-10", 1 ],
-									"midpoints" : [ 302.66668701171875, 258.0, 243.16668701171875, 258.0 ],
+									"midpoints" : [ 243.66668701171875, 414.0, 243.16668701171875, 414.0 ],
 									"source" : [ "obj-54", 0 ]
 								}
 
@@ -4667,7 +4722,7 @@
 							}
 , 							{
 								"patchline" : 								{
-									"destination" : [ "obj-41", 0 ],
+									"destination" : [ "obj-40", 0 ],
 									"order" : 0,
 									"source" : [ "obj-95", 0 ]
 								}
@@ -5171,6 +5226,8 @@
 									"saved_object_attributes" : 									{
 										"autostart" : 0,
 										"defer" : 0,
+										"node_bin_path" : "",
+										"npm_bin_path" : "",
 										"watch" : 0
 									}
 ,
@@ -5300,6 +5357,8 @@
 					"saved_object_attributes" : 					{
 						"autostart" : 0,
 						"defer" : 0,
+						"node_bin_path" : "",
+						"npm_bin_path" : "",
 						"watch" : 0
 					}
 ,
@@ -5639,9 +5698,9 @@
 			}
  ],
 		"parameters" : 		{
-			"obj-7" : [ "dial", "dial", 0 ],
 			"obj-57::obj-27" : [ "textbutton", "textbutton", 0 ],
 			"obj-11" : [ "dial[1]", "dial[1]", 0 ],
+			"obj-7" : [ "dial", "dial", 0 ],
 			"parameterbanks" : 			{
 
 			}
@@ -5650,7 +5709,7 @@
 ,
 		"dependency_cache" : [ 			{
 				"name" : "speaking max",
-				"bootpath" : "~/Documents/GitHub/speaking",
+				"bootpath" : "~/Library/Mobile Documents/com~apple~CloudDocs/Documents/GitHub/speaking",
 				"patcherrelativepath" : "..",
 				"type" : "fold",
 				"implicit" : 1
