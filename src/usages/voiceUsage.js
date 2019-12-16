@@ -1,5 +1,5 @@
 export let excludeName = new Set([
-    'Amelie', 'Ioana', 'Joana', 'Laura', 'Sara', 'Xander', 'Jorge', 'Diego', 'Sata', 'Alice', 'Luciana'
+    'Amelie', 'Ioana', 'Joana', 'Laura', 'Sara', 'Xander', 'Jorge', 'Diego', 'Satu', 'Alice', 'Luciana', 'Mariska'
 ]);
 
 export let excludeLang = new Set([
