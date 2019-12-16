@@ -1,4 +1,4 @@
-Humanity’s greatest advances are not in its discoveries, but in how those discoveries are applied to reduce inequity.
+Humanity’s greatest advances are not in its discoveries. but in how those discoveries are applied to reduce inequity.
 Create Systems and Ecosystems to Change the World
 Change the world, or go home.
 Be the platform.
@@ -9,9 +9,11 @@ Information technology and business are becoming inextricably interwoven. I don�
 It’s pretty incredible to look back 30 years to when Microsoft was starting and realize how work has been transformed. We’re finally getting close to what I call the digital workstyle.
 I believe that if you show people the problems and you show them the solutions they will be moved to act.
 It’s fine to celebrate success but it is more important to heed the lessons of failure.
-Technology is just a tool. In terms of getting the kids working together and motivating them, the teacher is the most important.
-The first rule of any technology used in a business is that automation applied to an efficient operation will magnify the efficiency. The second is that automation applied to an inefficient operation will magnify the inefficiency.
-The vision is really about empowering workers, giving them all the information about what’s going on so they can do a lot more than they’ve done in the past.
+Technology is just a tool. In terms of getting the kids working together and motivating them
+The first rule of any technology used in a business is that automation applied to an efficient operation will magnify the efficiency. 
+The second is that automation applied to an inefficient operation will magnify the inefficiency.
+The vision is really about empowering workers, 
+giving them all the information about what’s going on so they can do a lot more than they’ve done in the past.
 We are all created equal in the virtual world and we can use this equality to help address some of the sociological problems that society has yet to solve in the physical world.
 One of the wonderful things about the information highway, is that virtual equity is far easier to achieve than real-world equity. 
 As we look ahead into the next century, leaders will be those who empower others.
@@ -47,5 +49,5 @@ Never before in history has innovation offered promise of so much to so many in 
 One of the wonderful things about the information highway is that virtual equity is far easier to achieve than real-world equity…We are all created equal in the virtual world and we can use this equality to help address some of the sociological problems that society has yet to solve in the physical world.
 Our success has really been based on partnerships from the very beginning.
 Patience is a key element of success.
-Personal computing today is a rich ecosystem encompassing massive PC-based data centers, notebook and Tablet PCs, handheld devices, and smart cell phones. It has expanded from the desktop and the data center to wherever people need it — at their desks, in a meeting, on the road or even in the air.
+Personal computing today is a rich ecosystem encompassing massive PC-based data centers. notebook and Tablet PCs. handheld devices. and smart cell phones. It has expanded from the desktop and the data center to wherever people need it — at their desks. in a meeting. on the road or even in the air.
 Software is a great combination between artistry and engineering. When you finally get done and get to appreciate what you have done it is like a part of yourself that you`ve put together. I think a lot of the people here feel that way.

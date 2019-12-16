@@ -10,7 +10,9 @@ Chatbots
 Augmented Reality
 Virtual Reality
 Robotics
-Smart Industry four point zero. Internet Of Things. Quantum Computing
+Smart Industry four point zero. 
+Internet Of Things. 
+Quantum Computing
 Blockchain
 Technological Unemployment
 Emotional Intelligence
@@ -115,4 +117,4 @@ Web four point zero
 Webinar
 Web services
 Wikiality
-Workflow"
+Workflow
