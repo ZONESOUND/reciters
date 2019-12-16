@@ -43,7 +43,7 @@
 					"maxclass" : "dict.view",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 153.333333333333371, 528.5, 127.666666666666629, 83.0 ]
+					"patching_rect" : [ 153.333333333333371, 532.5, 127.666666666666629, 83.0 ]
 				}
 
 			}
@@ -54,7 +54,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 883.0, 189.0, 29.0, 22.0 ],
+					"patching_rect" : [ 914.0, 189.0, 29.0, 22.0 ],
 					"text" : "r s1"
 				}
 
@@ -78,7 +78,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "bang", "" ],
-					"patching_rect" : [ 726.0, 120.0, 34.0, 22.0 ],
+					"patching_rect" : [ 757.0, 120.0, 34.0, 22.0 ],
 					"text" : "sel 1"
 				}
 
@@ -90,7 +90,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 923.0, 184.0, 29.0, 22.0 ],
+					"patching_rect" : [ 954.0, 184.0, 29.0, 22.0 ],
 					"text" : "r s2"
 				}
 
@@ -98,12 +98,13 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-34",
+					"linecount" : 6,
 					"maxclass" : "message",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 13.0, 105.29998779296875, 99.0, 22.0 ],
-					"text" : "Webinar"
+					"patching_rect" : [ 13.0, 105.29998779296875, 99.0, 89.0 ],
+					"text" : "Smart Industry four point zero. Internet Of Things. Quantum Computing"
 				}
 
 			}
@@ -137,7 +138,7 @@
 						}
 ,
 						"classnamespace" : "box",
-						"rect" : [ -1137.0, -716.0, 844.0, 509.0 ],
+						"rect" : [ -1121.0, -716.0, 844.0, 509.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -184,7 +185,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 253.0, 402.0, 135.0, 22.0 ],
+									"patching_rect" : [ 253.0, 398.0, 135.0, 22.0 ],
 									"text" : "prepend speakAdvance"
 								}
 
@@ -193,11 +194,11 @@
 								"box" : 								{
 									"id" : "obj-13",
 									"maxclass" : "newobj",
-									"numinlets" : 3,
+									"numinlets" : 4,
 									"numoutlets" : 1,
 									"outlettype" : [ "dictionary" ],
-									"patching_rect" : [ 253.0, 326.0, 212.0, 22.0 ],
-									"text" : "dict.pack percentage:1. rate:1. pitch:2."
+									"patching_rect" : [ 253.0, 352.0, 238.0, 22.0 ],
+									"text" : "dict.pack text: percentage:1. rate:1. pitch:1."
 								}
 
 							}
@@ -251,12 +252,13 @@
 , 							{
 								"box" : 								{
 									"id" : "obj-10",
+									"linecount" : 5,
 									"maxclass" : "message",
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 74.0, 254.0, 104.0, 22.0 ],
-									"text" : "Webinar"
+									"patching_rect" : [ 74.0, 254.0, 104.0, 76.0 ],
+									"text" : "Smart Industry four point zero. Internet Of Things. Quantum Computing"
 								}
 
 							}
@@ -267,7 +269,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 74.0, 318.0, 57.0, 22.0 ],
+									"patching_rect" : [ 74.0, 352.0, 57.0, 22.0 ],
 									"text" : "tosymbol"
 								}
 
@@ -329,7 +331,7 @@
 									"maxclass" : "outlet",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 8.0, 318.0, 30.0, 30.0 ]
+									"patching_rect" : [ 8.0, 390.0, 30.0, 30.0 ]
 								}
 
 							}
@@ -406,8 +408,8 @@
 									"numinlets" : 1,
 									"numoutlets" : 3,
 									"outlettype" : [ "", "bang", "int" ],
-									"patching_rect" : [ 74.0, 174.0, 83.0, 22.0 ],
-									"text" : "text buzzword"
+									"patching_rect" : [ 74.0, 174.0, 99.0, 22.0 ],
+									"text" : "text buzzword.txt"
 								}
 
 							}
@@ -762,7 +764,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 942.0, 286.0, 50.0, 62.0 ],
+									"patching_rect" : [ 942.0, 286.0, 53.0, 62.0 ],
 									"text" : "\"Build a better system.\""
 								}
 
@@ -876,7 +878,6 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 469.0, 204.0, 605.0, 22.0 ],
-									"presentation_linecount" : 2,
 									"text" : "Build a better system."
 								}
 
@@ -1049,8 +1050,8 @@
 									"numinlets" : 1,
 									"numoutlets" : 3,
 									"outlettype" : [ "", "bang", "int" ],
-									"patching_rect" : [ 469.0, 131.0, 75.0, 22.0 ],
-									"text" : "text billgates"
+									"patching_rect" : [ 469.0, 131.0, 91.0, 22.0 ],
+									"text" : "text billgates.txt"
 								}
 
 							}
@@ -1061,8 +1062,8 @@
 									"numinlets" : 1,
 									"numoutlets" : 3,
 									"outlettype" : [ "", "bang", "int" ],
-									"patching_rect" : [ 80.0, 127.0, 66.0, 22.0 ],
-									"text" : "text sekula"
+									"patching_rect" : [ 80.0, 127.0, 82.0, 22.0 ],
+									"text" : "text sekula.txt"
 								}
 
 							}
@@ -1400,9 +1401,22 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "float" ],
-					"parameter_enable" : 0,
+					"parameter_enable" : 1,
 					"patching_rect" : [ 587.666666666666629, 209.0, 40.0, 40.0 ],
-					"size" : 2.0
+					"saved_attribute_attributes" : 					{
+						"valueof" : 						{
+							"parameter_longname" : "dial[1]",
+							"parameter_initial_enable" : 1,
+							"parameter_mmax" : 2.0,
+							"parameter_initial" : [ 1.0 ],
+							"parameter_shortname" : "dial[1]",
+							"parameter_type" : 0
+						}
+
+					}
+,
+					"size" : 2.0,
+					"varname" : "dial[1]"
 				}
 
 			}
@@ -1414,9 +1428,22 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "float" ],
-					"parameter_enable" : 0,
+					"parameter_enable" : 1,
 					"patching_rect" : [ 655.0, 209.0, 40.0, 40.0 ],
-					"size" : 2.0
+					"saved_attribute_attributes" : 					{
+						"valueof" : 						{
+							"parameter_longname" : "dial",
+							"parameter_initial_enable" : 1,
+							"parameter_mmax" : 2.0,
+							"parameter_initial" : [ 1.0 ],
+							"parameter_shortname" : "dial",
+							"parameter_type" : 0
+						}
+
+					}
+,
+					"size" : 2.0,
+					"varname" : "dial"
 				}
 
 			}
@@ -1465,7 +1492,20 @@
 						"tags" : "",
 						"style" : "",
 						"subpatcher_template" : "",
+						"visible" : 1,
 						"boxes" : [ 							{
+								"box" : 								{
+									"id" : "obj-26",
+									"maxclass" : "message",
+									"numinlets" : 2,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 143.0, 110.847824096679688, 29.5, 22.0 ],
+									"text" : "0"
+								}
+
+							}
+, 							{
 								"box" : 								{
 									"floatoutput" : 1,
 									"id" : "obj-37",
@@ -2056,7 +2096,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 143.0, 98.347824096679688, 50.0, 20.0 ],
+									"patching_rect" : [ 143.0, 92.847824096679688, 50.0, 20.0 ],
 									"text" : "interval"
 								}
 
@@ -2103,7 +2143,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "bang" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 143.0, 120.347824096679688, 50.0, 22.0 ]
+									"patching_rect" : [ 143.0, 139.0, 50.0, 22.0 ]
 								}
 
 							}
@@ -2115,11 +2155,25 @@
 									"numinlets" : 1,
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "int" ],
-									"parameter_enable" : 0,
+									"parameter_enable" : 1,
 									"patching_rect" : [ 58.659431457519531, 120.347824096679688, 69.681137084960938, 22.0 ],
-									"text" : "taketurn",
+									"saved_attribute_attributes" : 									{
+										"valueof" : 										{
+											"parameter_longname" : "textbutton",
+											"parameter_initial_enable" : 1,
+											"parameter_mmax" : 1,
+											"parameter_initial" : [ 1.0 ],
+											"parameter_shortname" : "textbutton",
+											"parameter_enum" : [ "off", "on" ],
+											"parameter_type" : 2
+										}
+
+									}
+,
+									"text" : "normal",
 									"textcolor" : [ 0.847058823529412, 0.847058823529412, 0.847058823529412, 1.0 ],
-									"texton" : "normal"
+									"texton" : "normal",
+									"varname" : "textbutton"
 								}
 
 							}
@@ -2265,6 +2319,13 @@
 									"destination" : [ "obj-10", 2 ],
 									"midpoints" : [ 593.0, 313.0, 340.0, 313.0, 340.0, 268.0, 320.66668701171875, 268.0 ],
 									"source" : [ "obj-25", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-6", 0 ],
+									"source" : [ "obj-26", 0 ]
 								}
 
 							}
@@ -2437,7 +2498,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 617.0, 147.600006103515625, 84.0, 22.0 ],
+					"patching_rect" : [ 624.0, 152.0, 84.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"description" : "",
 						"digest" : "",
@@ -2455,7 +2516,7 @@
 					"maxclass" : "dict.view",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 774.0, 276.0, 262.83331298828125, 111.0 ]
+					"patching_rect" : [ 821.0, 246.899993896484375, 246.83331298828125, 110.600006103515625 ]
 				}
 
 			}
@@ -2466,7 +2527,7 @@
 					"numinlets" : 4,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 726.0, 218.0, 211.0, 22.0 ],
+					"patching_rect" : [ 757.0, 218.0, 211.0, 22.0 ],
 					"text" : "route speakover showUser nowSpeak"
 				}
 
@@ -2504,7 +2565,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 170.5, 452.0, 50.0, 22.0 ]
+					"patching_rect" : [ 183.5, 452.0, 50.0, 22.0 ]
 				}
 
 			}
@@ -2516,7 +2577,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 96.5, 452.0, 50.0, 22.0 ]
+					"patching_rect" : [ 103.0, 452.0, 50.0, 22.0 ]
 				}
 
 			}
@@ -2535,12 +2596,13 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-24",
+					"linecount" : 2,
 					"maxclass" : "newobj",
 					"numinlets" : 3,
 					"numoutlets" : 1,
 					"outlettype" : [ "dictionary" ],
-					"patching_rect" : [ 22.5, 486.899993896484375, 259.0, 22.0 ],
-					"text" : "dict.pack mode:changeTimeout speed:* delay:*"
+					"patching_rect" : [ 22.5, 486.899993896484375, 180.0, 35.0 ],
+					"text" : "dict.pack mode:changeTimeout speed:0 delay:0 @trigger -1"
 				}
 
 			}
@@ -2551,20 +2613,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 22.5, 528.5, 123.0, 22.0 ],
+					"patching_rect" : [ 22.5, 532.5, 123.0, 22.0 ],
 					"text" : "prepend speakConfig"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-33",
-					"linecount" : 2,
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 351.0, 57.0, 150.0, 37.0 ],
-					"text" : "開啟五個網頁時測試，好像是會講完但要等很久"
 				}
 
 			}
@@ -2576,7 +2626,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 683.5, 41.899993896484375, 263.5, 35.0 ],
+					"patching_rect" : [ 834.5, 62.899993896484375, 263.5, 35.0 ],
 					"text" : "speak \"website, internet, google, yahoo, chrome, vimeo, soundcloud, twitter, instagram.\""
 				}
 
@@ -2588,7 +2638,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 325.0, 236.0, 59.0, 22.0 ],
+					"patching_rect" : [ 325.0, 227.0, 59.0, 22.0 ],
 					"text" : "route text"
 				}
 
@@ -2651,7 +2701,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 338.0, 201.0, 211.0, 33.0 ],
+					"patching_rect" : [ 342.0, 189.0, 211.0, 33.0 ],
 					"text" : "multiple websites speak at same time.\n(dict with text and percentage)"
 				}
 
@@ -2663,7 +2713,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 726.0, 276.0, 46.0, 60.0 ],
+					"patching_rect" : [ 757.0, 272.199996948242188, 46.0, 60.0 ],
 					"text" : "BANG \nwhen speak end"
 				}
 
@@ -2700,7 +2750,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 726.0, 246.899993896484375, 24.0, 24.0 ]
+					"patching_rect" : [ 757.0, 246.899993896484375, 24.0, 24.0 ]
 				}
 
 			}
@@ -2748,7 +2798,7 @@
 					"maxclass" : "dict.view",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 314.0, 381.899993896484375, 323.666666666666629, 83.0 ]
+					"patching_rect" : [ 390.333333333333371, 375.899993896484375, 323.666666666666629, 83.0 ]
 				}
 
 			}
@@ -2797,7 +2847,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 162.0, 178.100006103515625, 59.0, 22.0 ],
+					"patching_rect" : [ 162.0, 189.0, 59.0, 22.0 ],
 					"text" : "route text"
 				}
 
@@ -2809,7 +2859,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 162.0, 265.5, 88.0, 22.0 ],
+					"patching_rect" : [ 162.0, 254.600006103515625, 88.0, 22.0 ],
 					"text" : "prepend speak"
 				}
 
@@ -2817,14 +2867,13 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-3",
-					"linecount" : 11,
 					"maxclass" : "textedit",
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "int", "", "" ],
 					"parameter_enable" : 0,
 					"patching_rect" : [ 325.0, 100.5, 228.0, 84.5 ],
-					"text" : "\"The Internet has provided a social outlet to people who didn’t have one. The use of social media has revolutionized the way people share and communicate. Each person has the freedom to do whatever they choose online, and often this results in positive action. Many important groups that have been marginalized for one reason or another are now able to promote their platforms thoroughly.\""
+					"text" : "\"one, two, three, four, five\""
 				}
 
 			}
@@ -2847,7 +2896,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "int", "", "" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 916.83331298828125, 144.0, 136.0, 25.0 ],
+					"patching_rect" : [ 947.83331298828125, 144.0, 136.0, 25.0 ],
 					"tabs" : [ "local", "server" ]
 				}
 
@@ -2993,6 +3042,8 @@
 									"saved_object_attributes" : 									{
 										"autostart" : 0,
 										"defer" : 0,
+										"node_bin_path" : "",
+										"npm_bin_path" : "",
 										"watch" : 0
 									}
 ,
@@ -3094,7 +3145,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 800.0, 152.0, 63.0, 22.0 ],
+					"patching_rect" : [ 831.0, 152.0, 63.0, 22.0 ],
 					"text" : "script stop"
 				}
 
@@ -3106,7 +3157,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 726.0, 152.0, 64.0, 22.0 ],
+					"patching_rect" : [ 757.0, 152.0, 64.0, 22.0 ],
 					"text" : "script start"
 				}
 
@@ -3118,10 +3169,12 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 726.0, 189.0, 147.0, 22.0 ],
+					"patching_rect" : [ 757.0, 189.0, 147.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"autostart" : 0,
 						"defer" : 0,
+						"node_bin_path" : "",
+						"npm_bin_path" : "",
 						"watch" : 0
 					}
 ,
@@ -3219,7 +3272,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-100", 0 ],
-					"midpoints" : [ 32.0, 633.0, 726.0, 633.0, 726.0, 321.0, 711.0, 321.0, 711.0, 183.0, 735.5, 183.0 ],
+					"midpoints" : [ 32.0, 633.0, 726.0, 633.0, 726.0, 321.0, 711.0, 321.0, 711.0, 183.0, 766.5, 183.0 ],
 					"source" : [ "obj-21", 0 ]
 				}
 
@@ -3250,7 +3303,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-100", 0 ],
-					"midpoints" : [ 462.5, 360.0, 711.0, 360.0, 711.0, 183.0, 735.5, 183.0 ],
+					"midpoints" : [ 462.5, 360.0, 711.0, 360.0, 711.0, 183.0, 766.5, 183.0 ],
 					"source" : [ "obj-26", 0 ]
 				}
 
@@ -3384,7 +3437,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-100", 0 ],
-					"midpoints" : [ 171.5, 367.0, 713.0, 367.0, 713.0, 184.0, 735.5, 184.0 ],
+					"midpoints" : [ 171.5, 367.0, 713.0, 367.0, 713.0, 184.0, 766.5, 184.0 ],
 					"source" : [ "obj-5", 0 ]
 				}
 
@@ -3420,7 +3473,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-100", 0 ],
-					"midpoints" : [ 582.5, 190.0, 735.5, 190.0 ],
+					"midpoints" : [ 582.5, 190.0, 766.5, 190.0 ],
 					"source" : [ "obj-9", 0 ]
 				}
 
@@ -3461,6 +3514,16 @@
 
 			}
  ],
+		"parameters" : 		{
+			"obj-11" : [ "dial[1]", "dial[1]", 0 ],
+			"obj-7" : [ "dial", "dial", 0 ],
+			"obj-57::obj-27" : [ "textbutton", "textbutton", 0 ],
+			"parameterbanks" : 			{
+
+			}
+
+		}
+,
 		"dependency_cache" : [ 			{
 				"name" : "speaking max",
 				"bootpath" : "~/Documents/GitHub/speaking",

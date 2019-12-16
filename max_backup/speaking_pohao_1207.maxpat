@@ -201,7 +201,6 @@
 						"tags" : "",
 						"style" : "",
 						"subpatcher_template" : "",
-						"visible" : 1,
 						"boxes" : [  ],
 						"lines" : [  ]
 					}
@@ -263,6 +262,7 @@
 						"tags" : "",
 						"style" : "",
 						"subpatcher_template" : "",
+						"visible" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
 									"id" : "obj-12",
@@ -279,12 +279,12 @@
 , 							{
 								"box" : 								{
 									"id" : "obj-10",
-									"linecount" : 4,
+									"linecount" : 2,
 									"maxclass" : "message",
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 50.0, 236.0, 50.0, 62.0 ],
+									"patching_rect" : [ 50.0, 236.0, 66.0, 35.0 ],
 									"text" : "Machine Learning"
 								}
 
@@ -884,7 +884,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 362.0, 428.0, 57.0, 263.0 ],
+					"patching_rect" : [ 362.0, 428.0, 58.0, 263.0 ],
 					"text" : "\"One of the wonderful things about the information highway is that virtual equity is far easier to achieve than real-world equity....\""
 				}
 
@@ -1535,8 +1535,6 @@
 									"saved_object_attributes" : 									{
 										"autostart" : 0,
 										"defer" : 0,
-										"node_bin_path" : "",
-										"npm_bin_path" : "",
 										"watch" : 0
 									}
 ,
@@ -1666,8 +1664,6 @@
 					"saved_object_attributes" : 					{
 						"autostart" : 0,
 						"defer" : 0,
-						"node_bin_path" : "",
-						"npm_bin_path" : "",
 						"watch" : 0
 					}
 ,
@@ -2118,8 +2114,8 @@
 , 			{
 				"name" : "newobjYellow-1",
 				"default" : 				{
-					"fontsize" : [ 12.059008 ],
-					"accentcolor" : [ 0.82517, 0.78181, 0.059545, 1.0 ]
+					"accentcolor" : [ 0.82517, 0.78181, 0.059545, 1.0 ],
+					"fontsize" : [ 12.059008 ]
 				}
 ,
 				"parentstyle" : "",
@@ -2128,8 +2124,8 @@
 , 			{
 				"name" : "newobjYellow-2",
 				"default" : 				{
-					"fontsize" : [ 12.059008 ],
-					"accentcolor" : [ 0.82517, 0.78181, 0.059545, 1.0 ]
+					"accentcolor" : [ 0.82517, 0.78181, 0.059545, 1.0 ],
+					"fontsize" : [ 12.059008 ]
 				}
 ,
 				"parentstyle" : "",
