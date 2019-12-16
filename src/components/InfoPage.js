@@ -55,7 +55,7 @@ function InfoPage(props) {
     return (
     <InfoWrapper>
         <InfoSpan color={props.nameColor}>{props.personName}</InfoSpan>
-        <InfoSpan color={'orange'} fontSize={'2em'}>
+        <InfoSpan color={'purple'} fontSize={'2em'}>
             {props.sentence === '' ? '' : `"${props.sentence}"`}
         </InfoSpan>
         <InfoSpan color={'gray'} fontSize={'1.5em'}>{speaking}</InfoSpan>
