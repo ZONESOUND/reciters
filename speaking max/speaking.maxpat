@@ -39,6 +39,18 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-28",
+					"linecount" : 4,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 22.5, 385.399993896484375, 130.5, 64.0 ],
+					"text" : "如果有網頁沒收到所以沒有講話，下一句話就會隔speed(ms)*字母數+delay(ms)送出"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-56",
 					"maxclass" : "dict.view",
 					"numinlets" : 1,
@@ -755,7 +767,6 @@
 						"tags" : "",
 						"style" : "",
 						"subpatcher_template" : "",
-						"visible" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
 									"id" : "obj-25",
@@ -1050,8 +1061,8 @@
 									"numinlets" : 1,
 									"numoutlets" : 3,
 									"outlettype" : [ "", "bang", "int" ],
-									"patching_rect" : [ 469.0, 131.0, 91.0, 22.0 ],
-									"text" : "text billgates.txt"
+									"patching_rect" : [ 469.0, 131.0, 75.0, 22.0 ],
+									"text" : "text billgates"
 								}
 
 							}
@@ -1062,8 +1073,8 @@
 									"numinlets" : 1,
 									"numoutlets" : 3,
 									"outlettype" : [ "", "bang", "int" ],
-									"patching_rect" : [ 80.0, 127.0, 82.0, 22.0 ],
-									"text" : "text sekula.txt"
+									"patching_rect" : [ 80.0, 127.0, 66.0, 22.0 ],
+									"text" : "text sekula"
 								}
 
 							}
@@ -1492,7 +1503,6 @@
 						"tags" : "",
 						"style" : "",
 						"subpatcher_template" : "",
-						"visible" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
 									"id" : "obj-26",
@@ -3042,8 +3052,6 @@
 									"saved_object_attributes" : 									{
 										"autostart" : 0,
 										"defer" : 0,
-										"node_bin_path" : "",
-										"npm_bin_path" : "",
 										"watch" : 0
 									}
 ,
@@ -3173,8 +3181,6 @@
 					"saved_object_attributes" : 					{
 						"autostart" : 0,
 						"defer" : 0,
-						"node_bin_path" : "",
-						"npm_bin_path" : "",
 						"watch" : 0
 					}
 ,
