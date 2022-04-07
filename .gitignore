@@ -23,5 +23,6 @@ yarn-debug.log*
 yarn-error.log*
 
 src/usages/config.js
-speaking\ max/config.js
-speaking\ max/node_modules
+max/config.js
+max/node_modules
+max/package-lock.json
