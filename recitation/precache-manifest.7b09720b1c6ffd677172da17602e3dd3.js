@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "2960e7fdc947f4539df01c7969d3f531",
+    "revision": "a8b1b54b10b5a3821fd19100cb6857c5",
     "url": "/reciters/recitation/index.html"
   },
   {
-    "revision": "8499b69a19ca893cc7d3",
+    "revision": "df34944621d7c2047e33",
     "url": "/reciters/recitation/static/css/main.250591aa.chunk.css"
   },
   {
-    "revision": "a7812fa2f9bef9e26728",
-    "url": "/reciters/recitation/static/js/2.e610a843.chunk.js"
+    "revision": "529da98090575c806b29",
+    "url": "/reciters/recitation/static/js/2.ce00c3dd.chunk.js"
   },
   {
-    "revision": "3686b49f172feb32cdc9b870c6386080",
-    "url": "/reciters/recitation/static/js/2.e610a843.chunk.js.LICENSE.txt"
+    "revision": "b097398a0cc36bacb884c999afcca8dd",
+    "url": "/reciters/recitation/static/js/2.ce00c3dd.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "8499b69a19ca893cc7d3",
-    "url": "/reciters/recitation/static/js/main.a561a7a3.chunk.js"
+    "revision": "df34944621d7c2047e33",
+    "url": "/reciters/recitation/static/js/main.2dff12f7.chunk.js"
   },
   {
     "revision": "a52cf499fb8f1fb8d1e3",
