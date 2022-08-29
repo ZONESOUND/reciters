@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/reciters/static/css/main.e14fde10.chunk.css",
-    "main.js": "/reciters/static/js/main.c2e533e2.chunk.js",
-    "main.js.map": "/reciters/static/js/main.c2e533e2.chunk.js.map",
+    "main.js": "/reciters/static/js/main.193f2f16.chunk.js",
+    "main.js.map": "/reciters/static/js/main.193f2f16.chunk.js.map",
     "runtime-main.js": "/reciters/static/js/runtime-main.d77d9f62.js",
     "runtime-main.js.map": "/reciters/static/js/runtime-main.d77d9f62.js.map",
     "static/js/2.5663f890.chunk.js": "/reciters/static/js/2.5663f890.chunk.js",
     "static/js/2.5663f890.chunk.js.map": "/reciters/static/js/2.5663f890.chunk.js.map",
     "index.html": "/reciters/index.html",
-    "precache-manifest.3abac626eb47042cc9376b80ecff447d.js": "/reciters/precache-manifest.3abac626eb47042cc9376b80ecff447d.js",
+    "precache-manifest.44a25f01efe556d5ae532040f176b026.js": "/reciters/precache-manifest.44a25f01efe556d5ae532040f176b026.js",
     "service-worker.js": "/reciters/service-worker.js",
     "static/css/main.e14fde10.chunk.css.map": "/reciters/static/css/main.e14fde10.chunk.css.map",
     "static/js/2.5663f890.chunk.js.LICENSE": "/reciters/static/js/2.5663f890.chunk.js.LICENSE",
@@ -80,6 +80,6 @@
     "static/js/runtime-main.d77d9f62.js",
     "static/js/2.5663f890.chunk.js",
     "static/css/main.e14fde10.chunk.css",
-    "static/js/main.c2e533e2.chunk.js"
+    "static/js/main.193f2f16.chunk.js"
   ]
 }
