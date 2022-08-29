@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "fd33736cd5b30d76d32dc0c4aca90040",
+    "revision": "039d7a769b9c7e92d376b91e9e41fcc0",
     "url": "/reciters/index.html"
   },
   {
-    "revision": "d25701bcd414a02effd4",
+    "revision": "2d072d5b97f10b82e878",
     "url": "/reciters/static/css/main.e14fde10.chunk.css"
   },
   {
@@ -16,12 +16,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/reciters/static/js/2.5663f890.chunk.js.LICENSE"
   },
   {
-    "revision": "d25701bcd414a02effd4",
-    "url": "/reciters/static/js/main.6e977341.chunk.js"
+    "revision": "2d072d5b97f10b82e878",
+    "url": "/reciters/static/js/main.d0c78772.chunk.js"
   },
   {
     "revision": "ee43649f96133e4a6824",
     "url": "/reciters/static/js/runtime-main.d77d9f62.js"
+  },
+  {
+    "revision": "bf56cc08aacfc64fdd2a2972d6aac782",
+    "url": "/reciters/static/media/S3_test.bf56cc08.mp3"
   },
   {
     "revision": "ea66968057478e75ce6cebd143ab9fe7",
@@ -30,42 +34,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "32934c477ace85335dfe531f17d0a8b2",
     "url": "/reciters/static/media/s2_10.32934c47.mp3"
-  },
-  {
-    "revision": "7cf882bbc9bc18ea067789cc4796cdab",
-    "url": "/reciters/static/media/s2_20.7cf882bb.mp3"
-  },
-  {
-    "revision": "97f720c9bd776e3e3e7f151684957560",
-    "url": "/reciters/static/media/s3_10.97f720c9.mp3"
-  },
-  {
-    "revision": "81d2e38b9768d210d99b95c6fef66969",
-    "url": "/reciters/static/media/s3_12.81d2e38b.mp3"
-  },
-  {
-    "revision": "c6e1ff7bf89be3b7292d36c82e0e71fc",
-    "url": "/reciters/static/media/s3_13.c6e1ff7b.mp3"
-  },
-  {
-    "revision": "239f4f866454ccf7cc8afcdd2fbd54e3",
-    "url": "/reciters/static/media/s3_14.239f4f86.mp3"
-  },
-  {
-    "revision": "7f641ed94ba1af146030273d7066c9a7",
-    "url": "/reciters/static/media/s3_5.7f641ed9.mp3"
-  },
-  {
-    "revision": "fe4f8ed86c267ce9fb15416fd5ee5809",
-    "url": "/reciters/static/media/s3_6.fe4f8ed8.mp3"
-  },
-  {
-    "revision": "1d60290c0b192bf50c51227df4770632",
-    "url": "/reciters/static/media/s3_7.1d60290c.mp3"
-  },
-  {
-    "revision": "0ad2ed30d8528fb2fe580c5cbc099c5f",
-    "url": "/reciters/static/media/s3_8.0ad2ed30.mp3"
   },
   {
     "revision": "0392c9c65a550bb936d02c61f4e9f9dc",
