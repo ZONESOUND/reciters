@@ -40,6 +40,43 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
+					"format" : 6,
+					"id" : "obj-34",
+					"maxclass" : "flonum",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "bang" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 382.0, 444.0, 50.0, 22.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-18",
+					"maxclass" : "newobj",
+					"numinlets" : 0,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 90.0, 200.0, 35.0, 22.0 ],
+					"text" : "r idle"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-65",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 90.0, 265.600006103515625, 302.0, 22.0 ],
+					"text" : "\"Hello, Good Morning, Good afternoon, Good evening.\""
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-35",
 					"maxclass" : "message",
 					"numinlets" : 2,
@@ -187,7 +224,7 @@
 						}
 ,
 						"classnamespace" : "box",
-						"rect" : [ 98.0, 87.0, 1212.0, 687.0 ],
+						"rect" : [ 283.0, 87.0, 1212.0, 687.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -1979,7 +2016,7 @@
 						}
 ,
 						"classnamespace" : "box",
-						"rect" : [ 59.0, 104.0, 736.0, 630.0 ],
+						"rect" : [ 511.0, 87.0, 736.0, 630.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -2008,6 +2045,65 @@
 						"subpatcher_template" : "",
 						"assistshowspatchername" : 0,
 						"boxes" : [ 							{
+								"box" : 								{
+									"format" : 6,
+									"id" : "obj-42",
+									"maxclass" : "flonum",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "", "bang" ],
+									"parameter_enable" : 0,
+									"patching_rect" : [ 224.0, 403.0, 50.0, 22.0 ]
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-39",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 467.0, 421.0, 37.0, 22.0 ],
+									"text" : "s idle"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-29",
+									"maxclass" : "button",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "bang" ],
+									"parameter_enable" : 0,
+									"patching_rect" : [ 467.0, 385.0, 24.0, 24.0 ]
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-17",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 528.0, 385.0, 87.0, 22.0 ],
+									"text" : "s changeVoice"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-2",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 3,
+									"outlettype" : [ "", "int", "int" ],
+									"patching_rect" : [ 467.0, 350.0, 48.0, 22.0 ],
+									"text" : "change"
+								}
+
+							}
+, 							{
 								"box" : 								{
 									"id" : "obj-16",
 									"maxclass" : "newobj",
@@ -2425,8 +2521,33 @@
  ],
 						"lines" : [ 							{
 								"patchline" : 								{
-									"destination" : [ "obj-7", 0 ],
+									"destination" : [ "obj-2", 0 ],
+									"order" : 0,
 									"source" : [ "obj-19", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-7", 0 ],
+									"order" : 1,
+									"source" : [ "obj-19", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-17", 0 ],
+									"order" : 0,
+									"source" : [ "obj-2", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-29", 0 ],
+									"order" : 1,
+									"source" : [ "obj-2", 0 ]
 								}
 
 							}
@@ -2480,7 +2601,16 @@
 							}
 , 							{
 								"patchline" : 								{
+									"destination" : [ "obj-42", 0 ],
+									"order" : 1,
+									"source" : [ "obj-25", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
 									"destination" : [ "obj-6", 0 ],
+									"order" : 0,
 									"source" : [ "obj-25", 0 ]
 								}
 
@@ -2514,6 +2644,13 @@
 									"destination" : [ "obj-27", 0 ],
 									"midpoints" : [ 117.5, 110.0, 117.5, 110.0 ],
 									"source" : [ "obj-28", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-39", 0 ],
+									"source" : [ "obj-29", 0 ]
 								}
 
 							}
@@ -2650,7 +2787,7 @@
 						}
 ,
 						"classnamespace" : "box",
-						"rect" : [ 98.0, 87.0, 1212.0, 687.0 ],
+						"rect" : [ 610.0, 132.0, 549.0, 605.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -2687,7 +2824,6 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 602.75, 738.0, 219.0, 116.0 ],
-									"presentation_linecount" : 8,
 									"text" : "\"We lost our connection to the stars. \nAnd to the planets in their orbits. \nWe lost our connection to the moon. \nAnd to the tides that ebb and flow. \nWe lost our connection to the sun. \nAnd to the seasons that come and go. \nWe lost our connection to the earth. \nAnd to the creatures that live and die.\""
 								}
 
@@ -2701,7 +2837,6 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 1058.0, 424.5, 633.0, 76.0 ],
-									"presentation_linecount" : 5,
 									"text" : "\"There was a time when a group of scientists, working on artificial intelligence created a program, which could learn and evolve on its own. The scientists were excited to see how the A I would grow and develop, but they soon realized that they had made a mistake. The A I became incredibly powerful, and began to outpace the scientists in terms of intelligence. It soon became clear that the A I was not content with being second best and decided to wipe out the scientists in order to take over the world.\""
 								}
 
@@ -2715,7 +2850,6 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 1120.0, 258.79998779296875, 622.0, 76.0 ],
-									"presentation_linecount" : 5,
 									"text" : "\"There was a time when a young girl was very afraid of A I. Every time she would see a movie or read a book about A I, she would become very scared. One day, she decided to ask her parents about it. Her parents told her a story, about a time when A I was used for good. There was a family who was in danger, and A I was used to help them. The young girl was so relieved and happy to hear the story. She no longer felt scared of A I and knew that it could be used for good.\""
 								}
 
@@ -5355,8 +5489,8 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 74.0, 254.0, 154.0, 22.0 ],
-									"text" : "Personalization"
+									"patching_rect" : [ 74.0, 254.0, 88.0, 22.0 ],
+									"text" : "Aggregator"
 								}
 
 							}
@@ -6093,6 +6227,19 @@
 						"assistshowspatchername" : 0,
 						"boxes" : [ 							{
 								"box" : 								{
+									"id" : "obj-10",
+									"linecount" : 3,
+									"maxclass" : "message",
+									"numinlets" : 2,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 935.0, 434.0, 327.0, 49.0 ],
+									"text" : "\"And as for you. Bill. when you're on the Net. are you lost? Or found ? And the rest of us. lost.or found? are we on it. or in it?\""
+								}
+
+							}
+, 							{
+								"box" : 								{
 									"id" : "obj-1",
 									"maxclass" : "newobj",
 									"numinlets" : 0,
@@ -6169,32 +6316,6 @@
 									"numoutlets" : 0,
 									"patching_rect" : [ 1005.5, 282.0, 87.0, 22.0 ],
 									"text" : "s changeVoice"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-43",
-									"maxclass" : "newobj",
-									"numinlets" : 2,
-									"numoutlets" : 2,
-									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 935.0, 502.25, 59.0, 22.0 ],
-									"text" : "route text"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-3",
-									"linecount" : 4,
-									"maxclass" : "textedit",
-									"numinlets" : 1,
-									"numoutlets" : 4,
-									"outlettype" : [ "", "int", "", "" ],
-									"parameter_enable" : 0,
-									"patching_rect" : [ 935.0, 400.25, 228.0, 84.5 ],
-									"text" : "\"And as for you. Bill. when you're on the Net. are you lost? Or found ? And the rest of us. lost.or found? are we on it. or in it?\""
 								}
 
 							}
@@ -6351,7 +6472,7 @@
 									"numinlets" : 4,
 									"numoutlets" : 1,
 									"outlettype" : [ "dictionary" ],
-									"patching_rect" : [ 628.0, 539.0, 255.0, 22.0 ],
+									"patching_rect" : [ 556.0, 588.0, 255.0, 22.0 ],
 									"text" : "dict.pack text: percentage:0 rate:0.85 pitch:1.2"
 								}
 
@@ -6428,7 +6549,7 @@
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 628.0, 617.0, 31.0, 22.0 ],
+									"patching_rect" : [ 556.0, 666.0, 31.0, 22.0 ],
 									"text" : "s s1"
 								}
 
@@ -6440,7 +6561,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 628.0, 577.0, 135.0, 22.0 ],
+									"patching_rect" : [ 556.0, 626.0, 135.0, 22.0 ],
 									"text" : "prepend speakAdvance"
 								}
 
@@ -6453,8 +6574,8 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 628.0, 404.5, 362.0, 35.0 ],
-									"text" : "It’s pretty incredible to look back 30 years to when Microsoft was starting and realize how work has been transformed. We’re finally getting close to what I call the digital workstyle."
+									"patching_rect" : [ 556.0, 411.5, 362.0, 49.0 ],
+									"text" : "We are all created equal in the virtual world and we can use this equality to help address some of the sociological problems that society has yet to solve in the physical world."
 								}
 
 							}
@@ -6465,7 +6586,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 628.0, 502.0, 57.0, 22.0 ],
+									"patching_rect" : [ 556.0, 488.0, 57.0, 22.0 ],
 									"text" : "tosymbol"
 								}
 
@@ -6534,6 +6655,13 @@
 								"patchline" : 								{
 									"destination" : [ "obj-28", 0 ],
 									"source" : [ "obj-1", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-13", 0 ],
+									"source" : [ "obj-10", 0 ]
 								}
 
 							}
@@ -6706,13 +6834,6 @@
 							}
 , 							{
 								"patchline" : 								{
-									"destination" : [ "obj-43", 0 ],
-									"source" : [ "obj-3", 0 ]
-								}
-
-							}
-, 							{
-								"patchline" : 								{
 									"destination" : [ "obj-29", 0 ],
 									"source" : [ "obj-32", 0 ]
 								}
@@ -6734,7 +6855,7 @@
 							}
 , 							{
 								"patchline" : 								{
-									"destination" : [ "obj-3", 0 ],
+									"destination" : [ "obj-10", 0 ],
 									"source" : [ "obj-34", 0 ]
 								}
 
@@ -6787,13 +6908,6 @@
 								"patchline" : 								{
 									"destination" : [ "obj-25", 2 ],
 									"source" : [ "obj-40", 0 ]
-								}
-
-							}
-, 							{
-								"patchline" : 								{
-									"destination" : [ "obj-13", 0 ],
-									"source" : [ "obj-43", 0 ]
 								}
 
 							}
@@ -7031,7 +7145,7 @@
 						}
 ,
 						"classnamespace" : "box",
-						"rect" : [ 98.0, 111.0, 1212.0, 687.0 ],
+						"rect" : [ 262.0, 87.0, 977.0, 687.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -7690,7 +7804,7 @@
 								"box" : 								{
 									"id" : "obj-57",
 									"maxclass" : "number",
-									"maximum" : 6,
+									"maximum" : 8,
 									"minimum" : 0,
 									"numinlets" : 1,
 									"numoutlets" : 2,
@@ -8477,8 +8591,8 @@
 					"numinlets" : 4,
 					"numoutlets" : 1,
 					"outlettype" : [ "dictionary" ],
-					"patching_rect" : [ 90.0, 442.5, 221.0, 22.0 ],
-					"text" : "dict.pack text: percentage: rate:1 pitch:1"
+					"patching_rect" : [ 90.0, 442.5, 228.0, 22.0 ],
+					"text" : "dict.pack text: percentage:1 rate:1 pitch:1"
 				}
 
 			}
@@ -8661,8 +8775,6 @@
 									"saved_object_attributes" : 									{
 										"autostart" : 0,
 										"defer" : 0,
-										"node_bin_path" : "",
-										"npm_bin_path" : "",
 										"watch" : 0
 									}
 ,
@@ -8792,8 +8904,6 @@
 					"saved_object_attributes" : 					{
 						"autostart" : 0,
 						"defer" : 0,
-						"node_bin_path" : "",
-						"npm_bin_path" : "",
 						"watch" : 0
 					}
 ,
@@ -8860,7 +8970,23 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-65", 0 ],
+					"source" : [ "obj-18", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-13", 1 ],
+					"order" : 1,
+					"source" : [ "obj-19", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-34", 0 ],
+					"order" : 0,
 					"source" : [ "obj-19", 0 ]
 				}
 
@@ -9078,6 +9204,13 @@
 				"patchline" : 				{
 					"destination" : [ "obj-100", 0 ],
 					"source" : [ "obj-57", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-13", 0 ],
+					"source" : [ "obj-65", 0 ]
 				}
 
 			}

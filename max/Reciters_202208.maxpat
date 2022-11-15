@@ -3,8 +3,8 @@
 		"fileversion" : 1,
 		"appversion" : 		{
 			"major" : 8,
-			"minor" : 3,
-			"revision" : 1,
+			"minor" : 5,
+			"revision" : 0,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
@@ -58,9 +58,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 136.083333333333314, 543.600006103515625, 299.0, 22.0 ],
-					"presentation_linecount" : 2,
-					"text" : "\"Hello Good Morning, Good afternoon, Good evening.\""
+					"patching_rect" : [ 136.083333333333314, 543.600006103515625, 302.0, 22.0 ],
+					"text" : "\"Hello, Good Morning, Good afternoon, Good evening.\""
 				}
 
 			}
@@ -342,8 +341,8 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 8,
-							"minor" : 3,
-							"revision" : 1,
+							"minor" : 5,
+							"revision" : 0,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -1660,7 +1659,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 90.0, 272.600006103515625, 242.0, 35.0 ],
+					"patching_rect" : [ 90.0, 272.600006103515625, 245.0, 35.0 ],
 					"text" : "\"Tiktok, Facebook, Google, Yahoo, Chrome, Vimeo, SoundcCoud, twitter, instagram.\""
 				}
 
@@ -1886,8 +1885,8 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 8,
-							"minor" : 3,
-							"revision" : 1,
+							"minor" : 5,
+							"revision" : 0,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -1968,8 +1967,6 @@
 									"saved_object_attributes" : 									{
 										"autostart" : 0,
 										"defer" : 0,
-										"node_bin_path" : "",
-										"npm_bin_path" : "",
 										"watch" : 0
 									}
 ,
@@ -2099,8 +2096,6 @@
 					"saved_object_attributes" : 					{
 						"autostart" : 0,
 						"defer" : 0,
-						"node_bin_path" : "",
-						"npm_bin_path" : "",
 						"watch" : 0
 					}
 ,
